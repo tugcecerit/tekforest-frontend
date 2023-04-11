@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.plant-card {
+  width: 20%;
+}
+.plant-card img {
+  width: 100%;
+}
