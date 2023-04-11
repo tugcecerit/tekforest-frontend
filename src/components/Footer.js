@@ -1,8 +1,8 @@
 const Footer = (props) => {
     return (
-        <div>
-            <h2>this is footer</h2>
-        </div>
+    <footer className="footer">
+            <p>&copy; 2023 TEKforest Company. All rights reserved.</p>
+    </footer>
     )
 }
 

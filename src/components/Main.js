@@ -4,16 +4,21 @@ import PlantNew from '../pages/PlantNew'
 import PlantEdit from '../pages/PlantEdit'
 import PlantShow from '../pages/PlantShow'
 import PlantIndex from '../pages/PlantIndex'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
+import Home from '../pages/Home'
+import Register from '../pages/Register'
+import Signin from '../pages/Signin'
 
 const Main = (props) => {
-    const [plant, setPlant] = useState(null)
+    const [plants, setPlants] = useState(null)
     const URL = "http://localhost:4000/plants/"
 
-    const getPlant = async() => {
+    const getPlants = async() => {
         const response = await fetch(URL);
         const data = await response.json()
         console.log(data.data)
-        setPlant(data.data)
+        setPlants(data.data)
     }
 
     const createPlant = async (plant) => {
@@ -24,7 +29,7 @@ const Main = (props) => {
             },
             body: JSON.stringify(plant)
         })
-        getPlant()
+        getPlants()
     }
 
     const updatePlant = async (plant, id) => {
@@ -35,28 +40,33 @@ const Main = (props) => {
             },
             body: JSON.stringify(plant)
         })
-        getPlant()
+        getPlants()
     }
 
     const deletePlant = async (id) => {
         await fetch(URL + id, {
             method: "DELETE",
         });
-        getPlant();
+        getPlants();
       };
 
       useEffect(() => {
-        getPlant()
+        getPlants()
     }, [])
 
     return (
         <main>
             <Routes>
-                <Route path="/plants" element={<PlantIndex plant={plant} getPlant={getPlant}/>} />
-                <Route path="/plants/new" element={<PlantNew plant={plant} createPlant={createPlant}/>} />
-                <Route path="/plants/:id/edit" element={<PlantEdit plant={plant} 
+                <Route path="/about" element={<About plants={plants}/>} />
+                <Route path="/contact" element={<Contact plants={plants}/>} />
+                <Route path="/register" element={<Register plants={plants}/>} />
+                <Route path="/signin" element={<Signin plants={plants}/>} />
+                <Route path="/" element={<Home plants={plants}/>} />
+                <Route path="/plants" element={<PlantIndex plants={plants} getPlants={getPlants}/>} />
+                <Route path="/plants/new" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
+                <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 
                 updatePlant={updatePlant}/>} />
-                <Route path="/plants/:id" element={<PlantShow plant={plant} 
+                <Route path="/plants/:id" element={<PlantShow plants={plants} 
                 deletePlant={deletePlant}/>} />
             </Routes>
         </main>
