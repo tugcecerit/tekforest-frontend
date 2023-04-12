@@ -4,10 +4,11 @@ import {Link} from "react-router-dom"
 const PlantCard = (props) => {
     const plant = props.plant
     return (
-            <>
-                <img src={plant.Img} className="cards"></img>
-                <h4>{plant['Common name']}</h4>
-            </>
+            <div className="plant-card">
+                <img src={plant.Img} className="pure-img"/>
+                <h2>{plant['Common name']}</h2>
+                <h4>{plant.Categories}</h4>
+            </div>
 
     )
 }

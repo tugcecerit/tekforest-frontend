@@ -30,14 +30,16 @@ const PlantsContainer = (props) => {
     }, [])
     const loaded = () => {
     return (
-        <div className="pure-g">
-                {plants.map((plant) => {
-                    return (
-                        <div key={plant.id} className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
-                            <PlantCard plant={plant}/>
-                        </div>
-                    )
-                })}
+        <div className="PlantsContainer">
+            <div className="pure-g">
+                    {plants.map((plant) => {
+                        return (
+                            <div key={plant.id} className="pure-u-1 pure-u-md-1-3">
+                                <PlantCard plant={plant}/>
+                            </div>
+                        )
+                    })}
+            </div>
         </div>
         )
     }
