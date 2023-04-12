@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { loginUser } from "../../actions/authActions";
+// import { connect } from "react-redux";
+// import { loginUser } from "../actions/authActions";
 import classnames from "classnames";
 
 class Login extends Component {
@@ -128,7 +128,9 @@ const mapStateToProps = state => ({
     errors: state.errors
   });
 
- export default connect(
-    mapStateToProps,
-    { loginUser }
-  )(Login);
+//  export default connect(
+//     mapStateToProps,
+//     { loginUser }
+//   )(Login);
+
+export default Login
