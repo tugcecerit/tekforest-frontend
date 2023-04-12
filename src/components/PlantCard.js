@@ -5,7 +5,7 @@ const PlantCard = (props) => {
     const plant = props.plant
     return (
             <>
-                <img src={plant.Img}></img>
+                <img src={plant.Img} className="cards"></img>
                 <h4>{plant['Common name']}</h4>
             </>
 
