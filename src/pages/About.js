@@ -1,6 +1,7 @@
 const About = (props) => {
     return (
-    <div>
+    <div className="about">
+    <div className="about-text">
     <h2>Welcome to TEKforest!</h2>
     <p>At TEKforest, we are passionate about plants and their fascinating world. We strive to be a reliable and comprehensive source of plant information, providing valuable insights and knowledge to plant enthusiasts, gardeners, and nature lovers alike.</p>
 
@@ -11,6 +12,9 @@ const About = (props) => {
     <h3>Our Mission</h3>
 
     <p>Our mission is to foster a community that celebrates the joy and benefits of plants. We aim to provide accurate, up-to-date, and accessible information about plants, including their identification, care, and uses. We are committed to promoting sustainable and responsible gardening practices, as well as raising awareness about the importance of conserving and protecting our natural environment.</p>
+    </div>
+    <div className="bg"></div>
+    <img className="plant" src="/plant.png"></img>
     </div>
     )
 }

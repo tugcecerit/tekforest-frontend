@@ -4,7 +4,7 @@ import PlantsContainer from '../components/PlantsContainer'
 const PlantIndex = (props) => {
         
         return (
-        <section>
+        <section className="index">
             {<PlantsContainer/>}
         </section>
         )
