@@ -5,10 +5,10 @@ const PlantCard = (props) => {
     const plant = props.plant
     return (
         <Link to ={`/plants/${plant._id}`}>
-        <div className="plant-card" >
-            <img src={plant.image}/>
-            <h1>{plant.commonName}</h1>
-        </div>
+            <div className="plant-card" >
+                <img src={plant.Img}></img>
+                <h4>{plant['Common name']}</h4>
+            </div>
         </Link>
     )
 }
