@@ -9,6 +9,8 @@ import Contact from '../pages/Contact'
 import Home from '../pages/Home'
 import Register from '../pages/Register'
 import Signin from '../pages/Signin'
+import PlantCategories from '../pages/PlantCategories'
+import Category from '../pages/Category'
 
 const Main = (props) => {
     const [plants, setPlants] = useState(null)
@@ -62,6 +64,8 @@ const Main = (props) => {
                 <Route path="/register" element={<Register plants={plants}/>} />
                 <Route path="/signin" element={<Signin plants={plants}/>} />
                 <Route path="/" element={<Home plants={plants}/>} />
+                <Route path="/categories" element={<PlantCategories plants={plants}/>} />
+                <Route path="/category" element={<Category />} />
                 <Route path="/plants" element={<PlantIndex plants={plants} getPlants={getPlants}/>} />
                 <Route path="/plants/new" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
                 <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 
