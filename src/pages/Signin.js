@@ -14,15 +14,15 @@ class Login extends Component {
       errors: {}
     };
   }
-  componentDidMount() {
-    // If logged in and user navigates to Login page, should redirect them to dashboard
-    if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
-    }
-  }
+  // componentDidMount() {
+  //   // If logged in and user navigates to Login page, should redirect them to home
+  //   if (this.props.auth.isAuthenticated) {
+  //     this.props.history.push("/");
+  //   }
+  // }
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard"); // push user to dashboard when they login
+      this.props.history.push("/"); // push user to home when they login
     }
 if (nextProps.errors) {
       this.setState({
@@ -54,7 +54,7 @@ return (
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
-                <b>Login</b> below
+                <b>Sign In</b> below
               </h4>
               <p className="grey-text text-darken-1">
                 Don't have an account? <Link to="/register">Register</Link>
