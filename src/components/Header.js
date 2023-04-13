@@ -9,6 +9,9 @@ const Header = (props) => {
       <Link to="/plants" className='link'>
         <div>PLANTS</div>
       </Link>
+      <Link to="/categories" className='link'>
+        <div>CATEGORIES</div>
+      </Link>
       <Link to="/about" className='link'>
         <div>ABOUT US</div>
       </Link>
