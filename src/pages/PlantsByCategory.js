@@ -6,7 +6,7 @@ const PlantsContainerByCategory = (props) => {
     const [plants, setPlants] = React.useState([]);
     const apiKey = process.env.REACT_APP_PLANT_API_KEY;
     const params = useParams()
-    console.log(params);
+    const category = params.categoryName
     const options = {
         method: 'GET',
         headers: {
@@ -15,14 +15,14 @@ const PlantsContainerByCategory = (props) => {
         }
     };
 
-    const getPlantsByCategory = async (category) => {
-        const response = fetch(`https://house-plants2.p.rapidapi.com/category/${category}`, options)
-            .then(response => response.json())
-            .then((data) => {
-                setPlants(data);
-                console.log(plants);
-            })
-            .catch(err => console.error(err.message));
+    const getPlantsByCategory = async () => {
+        try {
+            const response = await fetch(`https://house-plants2.p.rapidapi.com/category/${category}`, options);
+            const data = await response.json();
+            setPlants(data);
+        } catch (err) {
+            console.error(err.message)
+        }
     }
 
     React.useEffect(() => {
@@ -31,7 +31,9 @@ const PlantsContainerByCategory = (props) => {
 
     const loaded = () => {
         return (
+            
             <div className="PlantsContainer">
+                <h1>{category}</h1>
                 <div className="pure-g">
                     {plants.map((plant) => {
                         return (

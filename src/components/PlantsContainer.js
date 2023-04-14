@@ -16,19 +16,22 @@ const PlantsContainer = (props) => {
     };
 
     const getPlant = async () => {
-        const response = fetch('https://house-plants2.p.rapidapi.com/all-lite', options)
-        .then(response => response.json())
-        .then((data) => {
+        try {
+            const response = await fetch('https://house-plants2.p.rapidapi.com/all-lite', options)
+            const data = await response.json();
             setPlants(data)
-            console.log(plants)
-        })
-        .catch(err => console.error(err.message));
+            
+        } catch (err) {
+            console.error(err.message);
+        }
     }
 
     React.useEffect(() => {
         getPlant()
     }, [])
+
     const loaded = () => {
+        console.log(plants)
     return (
         <div className="PlantsContainer">
             <div className="pure-g">

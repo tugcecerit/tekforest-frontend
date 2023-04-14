@@ -5,7 +5,8 @@ const PlantIndex = (props) => {
         
         return (
         <section className="index">
-            {<PlantsContainer/>}
+            {/* <PlantCategories/> */}
+            <PlantsContainer/>
         </section>
         )
 }

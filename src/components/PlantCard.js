@@ -1,13 +1,14 @@
 import { useState } from "react";
 import {Link} from "react-router-dom"
+import PlantCardImage from './PlantCardImage'
+import PlantCardBody from './PlantCardBody'
 
 const PlantCard = (props) => {
     const plant = props.plant
     return (
             <div className="plant-card">
-                <img src={plant.Img} className="pure-img"/>
-                <h2>{plant['Common name']}</h2>
-                <h4>{plant.Categories}</h4>
+                <PlantCardImage image={plant.Img}/>
+                <PlantCardBody commonName={plant['Common name']} catory={plant.Categories} />
             </div>
 
     )
