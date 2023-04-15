@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import React from "react";
 import {Routes, Route} from 'react-router-dom'
 import PlantNew from '../pages/PlantNew'
 import PlantEdit from '../pages/PlantEdit'
@@ -13,14 +14,35 @@ import PlantCategories from '../pages/PlantCategories'
 import PlantsByCategory from '../pages/PlantsByCategory'
 
 const Main = (props) => {
-    const [plants, setPlants] = useState(null)
+
+    const [plants, setPlants] = React.useState([])
+    const apiKey = process.env.REACT_APP_PLANT_API_KEY
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': apiKey,
+            'X-RapidAPI-Host': 'house-plants2.p.rapidapi.com'
+        }
+    };
+
+    const getPlants = async () => {
+        try {
+            const response = await fetch('https://house-plants2.p.rapidapi.com/all-lite', options)
+            const data = await response.json();
+            setPlants(data)
+            
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+
+    const [userPlants, setUserPlants] = useState(null)
     const URL = "http://localhost:4000/plants/"
 
-    const getPlants = async() => {
+    const getUserPlants = async() => {
         const response = await fetch(URL);
         const data = await response.json()
-        console.log(data.data)
-        setPlants(data.data)
+        setUserPlants(data.data)
     }
 
     const createPlant = async (plant) => {
@@ -31,7 +53,7 @@ const Main = (props) => {
             },
             body: JSON.stringify(plant)
         })
-        getPlants()
+        getUserPlants()
     }
 
     const updatePlant = async (plant, id) => {
@@ -42,18 +64,19 @@ const Main = (props) => {
             },
             body: JSON.stringify(plant)
         })
-        getPlants()
+        getUserPlants()
     }
 
     const deletePlant = async (id) => {
         await fetch(URL + id, {
             method: "DELETE",
         });
-        getPlants();
+        getUserPlants();
       };
 
       useEffect(() => {
         getPlants()
+        getUserPlants()
     }, [])
 
     return (
@@ -67,11 +90,10 @@ const Main = (props) => {
                 <Route path="/categories" element={<PlantCategories plants={plants}/>} />
                 <Route path="/plantsByCategory/:categoryName" element={<PlantsByCategory />} />
                 <Route path="/plants" element={<PlantIndex plants={plants}/>} />
-                <Route path="/plants/new" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
+                <Route path="/plants/new/:id" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
                 <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 
                 updatePlant={updatePlant}/>} />
-                <Route path="/plants/:id" element={<PlantShow plants={plants} 
-                deletePlant={deletePlant}/>} />
+                <Route path="/plants/:id" element={<PlantShow plants={plants}/>} />
             </Routes>
         </main>
     )
