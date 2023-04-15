@@ -14,42 +14,43 @@
 
 .home h1 {
   margin: 0;
-  /* color: rgb(116, 115, 115); */
   color: #F1EBE4;
+  float: left;
   font-family: optima;
-  padding: 100px;
-  font-size: 50px;
+  padding: 90px 150px;
+  font-size: 70px;
 }
 
 .home h3 {
   margin: 0;
-  /* color: rgb(116, 115, 115); */
-  color: #F1EBE4;
-  float: right;
+  color: #c8c2bb;
+  float: left;
   font-family: optima;
-  padding: 80px;
-  font-size: 30px;
-  width: 40%;
+  padding: 80px 90px;
+  font-size: 40px;
+  width: 65%;
 }
 
 .home button {
   position: relative;
-  float: right;
-  top: 30%;
-  left: 30%;
-  padding: 10px;
-  margin: 10px;
+  float: left;
+  top: 45%;
+  left: -45%;
+  padding: 10px 20px;
+  background-color: #c8c2bb;;
+  margin: 0 30px;
   border-radius: 10px;
+}
+
+.logo {
+  width: 180px;
 }
 
 .home-img {
   position: fixed;
-  bottom: -20%;
-  left: 0;
-  /* width: 40%; */
-  /* float: left; */
-  /* padding: 20px; */
-  /* border-radius: 40px; */
+  bottom: -10%;
+  left: 78%;
+  width: 22%;
 }
 
 .transparent-box {
@@ -127,12 +128,36 @@
 .nav {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(151, 151, 151, 0.5);
-    padding: 15px;
+    background-color: rgba(68, 107, 66, 0.5);
+    padding: 5px;
     width: 100%;
     margin: auto;
     font-weight: bold;
     z-index: 1;
+    font-family: optima;
+    font-size: 20px;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  padding-inline: 20px;
+}
+
+.nav-item a:hover{
+  text-decoration: none;
+  color: gray;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 1rem;
 }
 
 .social-media {
@@ -142,13 +167,15 @@
 .link {
   text-decoration: none;
   cursor: pointer;
+  padding-inline: 30px;
+  position: relative;
 }
 
-.link :active, :visited {
-  color: rgb(67, 131, 123);
+.link:active, :visited {
+  color: rgb(252, 252, 252);
 }
 
-.link :hover {
+.link:hover {
   color: gray;
 }
 
@@ -181,12 +208,26 @@
   display: none;
   position: absolute;
   z-index: 1;
+  background-color: rgba(68, 107, 66);
+  border-radius: 5px;
+  font-family: optima;
+  padding: 1rem;
+  font-size: 18px;
 }
 
 .nav-item:hover .category-dropdown {
   display: block;
 }
 
-.custom-dropdown-menu a {
-  text-decoration: none;
+.category-dropdown :hover {
+  color: rgb(67, 52, 52);
+}
+
+.contact-us {
+  padding: 5%;
+  font-family: optima;
+}
+
+.pure-button {
+  border-radius: 5px;
 }
