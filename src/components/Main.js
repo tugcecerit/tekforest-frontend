@@ -36,7 +36,7 @@ const Main = (props) => {
         }
     }
 
-    const [userPlants, setUserPlants] = useState(null)
+    const [userPlants, setUserPlants] = React.useState([])
     const URL = "http://localhost:4000/plants/"
 
     const getUserPlants = async() => {
@@ -78,8 +78,8 @@ const Main = (props) => {
         getPlants()
         getUserPlants()
     }, [])
-
     return (
+        
         <main>
             <Routes>
                 <Route path="/about" element={<About plants={plants}/>} />
@@ -90,6 +90,7 @@ const Main = (props) => {
                 <Route path="/categories" element={<PlantCategories plants={plants}/>} />
                 <Route path="/plantsByCategory/:categoryName" element={<PlantsByCategory />} />
                 <Route path="/plants" element={<PlantIndex plants={plants}/>} />
+                <Route path="/userPlants" element={<PlantIndex plants={userPlants}/>} />
                 <Route path="/plants/new/:id" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
                 <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 
                 updatePlant={updatePlant}/>} />
