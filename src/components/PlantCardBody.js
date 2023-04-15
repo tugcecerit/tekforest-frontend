@@ -1,11 +1,12 @@
-import { useState } from "react";
-import {Link} from "react-router-dom"
+
 
 const PlantCardBody = (props) => {
+    const plant = props.plant
+    console.log(plant)
     return (
         <>
-            <h2>{props.commonName}</h2>
-            <h4>{props.catory}</h4>
+            <h2>{plant['Common name']}</h2>
+            <h4>{plant.Categories}</h4>
         </>
     )
 }
