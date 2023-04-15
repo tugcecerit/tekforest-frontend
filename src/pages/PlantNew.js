@@ -1,8 +1,9 @@
 import { useState } from "react";
-import {useParams, useNavigate} from "react-router-dom"
+import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const PlantNew = (props) => {
-
+    const navigate = useNavigate()
     const params = useParams()
     const id = params.id
     const plants = props.plants
@@ -23,11 +24,10 @@ const PlantNew = (props) => {
     // handle the submission of the form
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.createPlant(form)
-        setForm({
-            commonName: "", 
-            image: "",
-            category: "",
+        props.createPlant(form).then(() => {
+            navigate('/userPlants')
+        }).catch((err) => {
+            console.log(err)
         })
     }
 
@@ -54,6 +54,7 @@ const PlantNew = (props) => {
                 placeholder="Category"
                 onChange={handleChanges}
             />
+            <input type="submit" value="Create Plant" />
         </form>
     )
 }

@@ -5,6 +5,7 @@ import PlantNew from '../pages/PlantNew'
 import PlantEdit from '../pages/PlantEdit'
 import PlantShow from '../pages/PlantShow'
 import PlantIndex from '../pages/PlantIndex'
+import UserPlants from '../pages/UserPlants/UserPlants'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Home from '../pages/Home'
@@ -90,7 +91,7 @@ const Main = (props) => {
                 <Route path="/categories" element={<PlantCategories plants={plants}/>} />
                 <Route path="/plantsByCategory/:categoryName" element={<PlantsByCategory />} />
                 <Route path="/plants" element={<PlantIndex plants={plants}/>} />
-                <Route path="/userPlants" element={<PlantIndex plants={userPlants}/>} />
+                <Route path="/userPlants" element={<UserPlants plants={userPlants}/>} />
                 <Route path="/plants/new/:id" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
                 <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 
                 updatePlant={updatePlant}/>} />

@@ -1,6 +1,6 @@
-import Button from './Button'
+import Button from '../../../components/Button'
 
-const PlantCardFooter = (props) => {
+const CardFooter = (props) => {
     const plant = props.plant
     return (
         <>
@@ -10,4 +10,4 @@ const PlantCardFooter = (props) => {
     )
 }
 
-export default PlantCardFooter;
+export default CardFooter;
