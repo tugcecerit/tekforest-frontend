@@ -57,6 +57,9 @@ const Header = (props) => {
           <Link to='/plants' className='link'>
             PLANTS
           </Link>
+          <Link to='/userPlants' className='link'>
+            MY PLANTS
+          </Link>
           <Link to='/about' className='link'>
             ABOUT US
           </Link>

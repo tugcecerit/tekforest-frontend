@@ -6,6 +6,9 @@ import PlantEdit from '../pages/PlantEdit'
 import PlantShow from '../pages/PlantShow'
 import PlantIndex from '../pages/PlantIndex'
 import UserPlants from '../pages/UserPlants/UserPlants'
+import UserPlantShow from '../pages/UserPlantShow'
+import UserPlantEdit from '../pages/UserPlantEdit'
+import UserPlantNew from '../pages/UserPlantNew'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Home from '../pages/Home'
@@ -58,6 +61,8 @@ const Main = (props) => {
     }
 
     const updatePlant = async (plant, id) => {
+        console.log(plant)
+        console.log(id)
         await fetch(URL + id, {
             method: "PUT",
             headers: {
@@ -92,6 +97,10 @@ const Main = (props) => {
                 <Route path="/plantsByCategory/:categoryName" element={<PlantsByCategory />} />
                 <Route path="/plants" element={<PlantIndex plants={plants}/>} />
                 <Route path="/userPlants" element={<UserPlants plants={userPlants}/>} />
+                <Route path="/userPlants/:id" element={<UserPlantShow plants={userPlants} deletePlant={deletePlant}/>}  />
+                <Route path="/userPlants/:id/edit" element={<UserPlantEdit plants={userPlants} updatePlant={updatePlant}/>} />
+                
+                <Route path="/userPlants/new" element={<UserPlantNew createPlant={createPlant}/>} />
                 <Route path="/plants/new/:id" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
                 <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 
                 updatePlant={updatePlant}/>} />
