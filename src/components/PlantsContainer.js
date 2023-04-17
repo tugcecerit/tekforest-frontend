@@ -13,7 +13,7 @@ const PlantsContainer = (props) => {
             <div className="pure-g">
                     {plants.map((plant) => {
                         return (
-                            <div key={plant.id} className="pure-u-1 pure-u-md-1-3">
+                            <div key={plant.id} className="pure-u-1 pure-u-md-1-4">
                                 <PlantCard plant={plant}/>
                             </div>
                         )

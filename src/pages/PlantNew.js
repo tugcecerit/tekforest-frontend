@@ -32,7 +32,7 @@ const PlantNew = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="new-form">
             <input
                 type="text"
                 value={form.commonName}

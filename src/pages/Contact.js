@@ -4,7 +4,7 @@ const Contact = (props) => {
     const handleAlert = (e) => {
         e.preventDefault();
         alert('Form submitted successfully!');
-        window.location.href = '/home';
+        window.location.href = '/';
     }
     return (
         <div className='contact-us'>           
@@ -31,7 +31,7 @@ const Contact = (props) => {
                         <label for="aligned-cb" class="pure-checkbox">
                             <input type="checkbox" id="aligned-cb" /> I&#x27;ve read the terms and conditions
                         </label><br></br><br></br>
-                        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                        <button onClick={handleAlert} type="submit">Submit</button>
                     </div>
                 </fieldset>
             </form>
