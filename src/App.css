@@ -35,20 +35,24 @@
   position: relative;
   float: left;
   top: 45%;
-  left: -45%;
-  padding: 10px 20px;
-  background-color: #c8c2bb;;
-  margin: 0 30px;
+  left: -50%;
+  margin: 10px 20px;
   border-radius: 10px;
 }
 
 .logo {
-  width: 180px;
+  width: 250px;
+  padding: 0.4em;
+}
+
+.new-form {
+  padding: 100px;
 }
 
 .home-img {
   position: fixed;
   bottom: -10%;
+  top: -10%;
   left: 78%;
   width: 22%;
 }
@@ -67,7 +71,6 @@
   backdrop-filter: blur(15px);
 }
 
-
 .about {
   background-image: linear-gradient(gainsboro, white);
   background-size: cover;
@@ -81,6 +84,11 @@
   min-height: 100vh;
 }
 
+Main {
+  background-image: linear-gradient(gainsboro, white);
+  background-size: cover;
+  min-height: 100vh;
+}
 
 .about h2 {
   margin: 0;
@@ -89,26 +97,27 @@
 .about-text {
   color: rgb(116, 115, 115);
   font-family: optima;
-  font-size: 20px;
+  font-size: 1.3em;
   width: 600px;
   position: relative;
   padding: 10%;
 }
 
 .bg {
-  width: 600px;
-  height: 600px;
+  width: 40em;
+  height: 40em;
   border: none;
   border-radius: 50%;
-  background-color: rgba(105, 156, 133, 0.5);
+  /* background-color: rgba(105, 156, 133, 0.5); */
+  background-color: #b0bfaf;
   position: absolute;
-  bottom: 27%;
+  bottom: 25%;
   left: 54%;
 }
 
 .plant {
   position: absolute;
-  bottom: 20%;
+  bottom: 18%;
   left: 55%;
 }
 
@@ -117,18 +126,21 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(151, 151, 151, 0.5);
-  padding: 10px;
+  /* background-color: rgb(151, 151, 151, 0.5); */
+  background-color: rgb(56, 64, 60, 0.6);
+  padding: 1em;
   text-align: center;
   font-size: 12px;
   font-weight: bold;
-  color: #ffffff;
+  color:#F1EBE4;
 }
 
 .nav {
     display: flex;
+    position: fixed;
     justify-content: space-around;
-    background-color: rgba(68, 107, 66, 0.5);
+    background-color: rgb(56, 64, 60, 0.6);
+    /* background-color: rgb(151, 151, 151, 0.5); */
     padding: 5px;
     width: 100%;
     margin: auto;
@@ -144,13 +156,13 @@
 
 .nav-item a {
   text-decoration: none;
-  color: white;
+  color: #F1EBE4;
   padding-inline: 20px;
 }
 
 .nav-item a:hover{
   text-decoration: none;
-  color: gray;
+  color: rgb(77, 127, 96);
 }
 
 .link-container {
@@ -165,6 +177,7 @@
 }
 
 .link {
+  font-family: optima;
   text-decoration: none;
   cursor: pointer;
   padding-inline: 30px;
@@ -172,18 +185,19 @@
 }
 
 .link:active, :visited {
-  color: rgb(252, 252, 252);
+  color: #F1EBE4;
 }
 
 .link:hover {
-  color: gray;
+  color:  rgb(77, 127, 96);
 }
 
 .PlantsContainer {
-  max-width: 1200px;
+  max-width: 1700px;
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 6em 0;
 }
+
 .plant-card {
   background-color: #FFFFFF;
   text-align: left;
@@ -192,7 +206,7 @@
   padding: 1em;
   font-family: optima;
   font-size: 14px;
-  margin: 0 0.5em 2em;
+  margin: 0 1em 2em;
   border-radius: 0.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -204,11 +218,19 @@
   border-radius: 0.5em 0.5em 0 0;
 }
 
+.pure-g {
+  font-family: optima;
+}
+
+h1 {
+  font-family: optima;
+}
+
 .category-dropdown {
   display: none;
   position: absolute;
   z-index: 1;
-  background-color: rgba(68, 107, 66);
+  background-color: rgb(56, 64, 60);
   border-radius: 5px;
   font-family: optima;
   padding: 1rem;
@@ -219,15 +241,61 @@
   display: block;
 }
 
-.category-dropdown :hover {
-  color: rgb(67, 52, 52);
+.category-dropdown:hover {
+  color: rgb(156, 199, 172);
 }
 
 .contact-us {
-  padding: 5%;
+  background-image: url("../public/home.jpg");
   font-family: optima;
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-us h1 {
+  margin: 0;
+  padding: 2%;
+  color:rgb(67, 52, 52);
+  font-family: optima;
+  position: relative;
+  top: 5em;
+  left: 10em;
+}
+
+.pure-form {
+  position: relative;
+  top: 10em;
+  left: 20em;
 }
 
 .pure-button {
   border-radius: 5px;
+  background-color: green;
 }
+
+button {
+  border: none;
+  background-color: #b0bfaf;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transform: translate(1) translate(0, 0);
+  transition: transform 225ms, box-shadow 225ms;
+}
+
+button:hover {
+  transform: scale(1.05) translate(0, -0.15rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+  transform: scale(1) translate(0, 0.15rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
