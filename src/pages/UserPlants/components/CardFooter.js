@@ -4,8 +4,8 @@ const CardFooter = (props) => {
     const plant = props.plant
     return (
         <>
-            <Button to={`/plants/${plant.id}`}  label="VIEW" />
-            <Button to={`/plants/new/${plant.id}`}  label="ADD" />
+            <Button to={`/userPlants/${plant._id}`}  label="VIEW" />
+            <Button to={`/userPlants/${plant._id}/edit`}  label="UPDATE" />
         </>
     )
 }
