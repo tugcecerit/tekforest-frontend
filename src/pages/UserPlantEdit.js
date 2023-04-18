@@ -2,17 +2,17 @@ import { useState } from "react";
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 
-const PlantNew = (props) => {
+const UserPlantEdit = (props) => {
     const navigate = useNavigate()
     const params = useParams()
     const id = params.id
     const plants = props.plants
-    const plant = plants.find((p) => p.id === id)
+    const plant = plants.find((p) => p._id === id)
     // state to hold all form data
     const [form, setForm] = useState({
-        commonName: `${plant['Common name']}`,
-        image: `${plant.Img}`,
-        category: `${plant.Categories}`,
+        commonName: `${plant.commonName}`,
+        image: `${plant.image}`,
+        category: `${plant.categories}`,
     })
 
     // handle changes in the form
@@ -24,7 +24,7 @@ const PlantNew = (props) => {
     // handle the submission of the form
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.createPlant(form).then(() => {
+        props.updatePlant(form, plant._id).then(() => {
             navigate('/userPlants')
         }).catch((err) => {
             console.log(err)
@@ -32,7 +32,7 @@ const PlantNew = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="new-form">
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 value={form.commonName}
@@ -54,9 +54,9 @@ const PlantNew = (props) => {
                 placeholder="Category"
                 onChange={handleChanges}
             />
-            <input type="submit" value="Create Plant" />
+            <input type="submit" value="Update" />
         </form>
     )
 }
 
-export default PlantNew;
+export default UserPlantEdit;

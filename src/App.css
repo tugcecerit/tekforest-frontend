@@ -6,7 +6,7 @@
 }
 
 .home {
-  background-image: url("../public/home.jpg");
+  background-image: url("../public/home1.jpg");
   background-size: cover;
   min-height: 100vh;
   align-items: center;
@@ -14,14 +14,51 @@
 
 .home h1 {
   margin: 0;
-  color: rgb(116, 115, 115);
+  color: #F1EBE4;
+  float: left;
   font-family: optima;
-  padding: 200px;
-  font-size: 50px;
+  padding: 90px 150px;
+  font-size: 70px;
+}
+
+.home h3 {
+  margin: 0;
+  color: #c8c2bb;
+  float: left;
+  font-family: optima;
+  padding: 80px 90px;
+  font-size: 40px;
+  width: 65%;
+}
+
+.home button {
+  position: relative;
+  float: left;
+  top: 45%;
+  left: -50%;
+  margin: 10px 20px;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 250px;
+  padding: 0.4em;
+}
+
+.new-form {
+  padding: 100px;
+}
+
+.home-img {
+  position: fixed;
+  bottom: -10%;
+  top: -10%;
+  left: 78%;
+  width: 22%;
 }
 
 .transparent-box {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   align-items: center;
   height: 75%;
@@ -31,8 +68,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  backdrop-filter: blur(15px);
 }
-
 
 .about {
   background-image: linear-gradient(gainsboro, white);
@@ -47,6 +84,11 @@
   min-height: 100vh;
 }
 
+Main {
+  background-image: linear-gradient(gainsboro, white);
+  background-size: cover;
+  min-height: 100vh;
+}
 
 .about h2 {
   margin: 0;
@@ -55,26 +97,27 @@
 .about-text {
   color: rgb(116, 115, 115);
   font-family: optima;
-  font-size: 20px;
+  font-size: 1.3em;
   width: 600px;
   position: relative;
   padding: 10%;
 }
 
 .bg {
-  width: 600px;
-  height: 600px;
+  width: 40em;
+  height: 40em;
   border: none;
   border-radius: 50%;
-  background-color: rgba(105, 156, 133, 0.5);
+  /* background-color: rgba(105, 156, 133, 0.5); */
+  background-color: #b0bfaf;
   position: absolute;
-  bottom: 27%;
+  bottom: 25%;
   left: 54%;
 }
 
 .plant {
   position: absolute;
-  bottom: 20%;
+  bottom: 18%;
   left: 55%;
 }
 
@@ -83,24 +126,50 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(151, 151, 151, 0.5);
-  padding: 10px;
+  /* background-color: rgb(151, 151, 151, 0.5); */
+  background-color: rgb(56, 64, 60, 0.6);
+  padding: 1em;
   text-align: center;
   font-size: 12px;
   font-weight: bold;
-  color: #ffffff;
+  color:#F1EBE4;
 }
-
-
 
 .nav {
     display: flex;
+    position: fixed;
     justify-content: space-around;
-    background-color: rgb(151, 151, 151, 0.5);
-    padding: 15px;
+    background-color: rgb(56, 64, 60, 0.6);
+    /* background-color: rgb(151, 151, 151, 0.5); */
+    padding: 5px;
     width: 100%;
     margin: auto;
     font-weight: bold;
+    z-index: 1;
+    font-family: optima;
+    font-size: 20px;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #F1EBE4;
+  padding-inline: 20px;
+}
+
+.nav-item a:hover{
+  text-decoration: none;
+  color: rgb(77, 127, 96);
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 1rem;
 }
 
 .social-media {
@@ -108,42 +177,125 @@
 }
 
 .link {
+  font-family: optima;
   text-decoration: none;
   cursor: pointer;
+  padding-inline: 30px;
+  position: relative;
 }
 
-
-.link :active, :visited {
-  color: white;
+.link:active, :visited {
+  color: #F1EBE4;
 }
 
-.link :hover {
-  color: gray;
+.link:hover {
+  color:  rgb(77, 127, 96);
 }
 
 .PlantsContainer {
-  max-width: 1000px;
+  max-width: 1700px;
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 6em 0;
 }
+
 .plant-card {
   background-color: #FFFFFF;
   text-align: left;
-  margin: 0 0.5em 2em;
-  border-radius: 0.2em;
+  width: 300px;
+  height: 410px;
+  padding: 1em;
+  font-family: optima;
+  font-size: 14px;
+  margin: 0 1em 2em;
+  border-radius: 0.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .plant-card img {
   display: block;
   width: 100%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 0.2em 0.2em 0 0;
+  border-radius: 0.5em 0.5em 0 0;
 }
 
-/* .cards {
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-  padding: 20px;
-} */
+.pure-g {
+  font-family: optima;
+}
+
+h1 {
+  font-family: optima;
+}
+
+.category-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(56, 64, 60);
+  border-radius: 5px;
+  font-family: optima;
+  padding: 1rem;
+  font-size: 18px;
+}
+
+.nav-item:hover .category-dropdown {
+  display: block;
+}
+
+.category-dropdown:hover {
+  color: rgb(156, 199, 172);
+}
+
+.contact-us {
+  background-image: url("../public/home.jpg");
+  font-family: optima;
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-us h1 {
+  margin: 0;
+  padding: 2%;
+  color:rgb(67, 52, 52);
+  font-family: optima;
+  position: relative;
+  top: 5em;
+  left: 10em;
+}
+
+.pure-form {
+  position: relative;
+  top: 10em;
+  left: 20em;
+}
+
+.pure-button {
+  border-radius: 5px;
+  background-color: green;
+}
+
+button {
+  border: none;
+  background-color: #b0bfaf;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transform: translate(1) translate(0, 0);
+  transition: transform 225ms, box-shadow 225ms;
+}
+
+button:hover {
+  transform: scale(1.05) translate(0, -0.15rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+  transform: scale(1) translate(0, 0.15rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+

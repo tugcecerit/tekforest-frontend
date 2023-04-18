@@ -2,23 +2,18 @@ import { useState } from "react";
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 
-const PlantNew = (props) => {
+const UserPlantNew = (props) => {
     const navigate = useNavigate()
-    const params = useParams()
-    const id = params.id
-    const plants = props.plants
-    const plant = plants.find((p) => p.id === id)
     // state to hold all form data
     const [form, setForm] = useState({
-        commonName: `${plant['Common name']}`,
-        image: `${plant.Img}`,
-        category: `${plant.Categories}`,
+        commonName: '',
+        image: '',
+        category: '',
     })
 
     // handle changes in the form
     const handleChanges = (event) => {
         setForm({ ...form, [event.target.name]: event.target.value })
-        console.log(form)
     }
 
     // handle the submission of the form
@@ -32,7 +27,7 @@ const PlantNew = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="new-form">
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 value={form.commonName}
@@ -59,4 +54,4 @@ const PlantNew = (props) => {
     )
 }
 
-export default PlantNew;
+export default UserPlantNew;
