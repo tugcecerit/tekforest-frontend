@@ -9,19 +9,17 @@
     margin: 0;
     color: #F1EBE4;
     float: left;
-    font-family: optima;
-    padding: 90px 150px;
-    font-size: 70px;
+    padding: 100px 140px;
+    font-size: 5rem;
   }
   
   .home h3 {
     margin: 0;
     color: #c8c2bb;
     float: left;
-    font-family: optima;
-    padding: 80px 90px;
-    font-size: 40px;
-    width: 65%;
+    padding: 10px 90px;
+    font-size: 3rem;
+    width: 70%;
   }
 
   .home-img {
@@ -48,8 +46,7 @@
 
   .home button {
     position: relative;
-    float: left;
-    top: 45%;
+    top: 65%;
     left: -50%;
     margin: 10px 20px;
     border-radius: 10px;
