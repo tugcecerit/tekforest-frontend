@@ -11,7 +11,7 @@ const Container = (props) => {
             <div className="pure-g">
                     {plants.map((plant) => {
                         return (
-                            <div key={plant.id} className="pure-u-1 pure-u-md-1-3">
+                            <div key={plant._id} className="pure-u-1 pure-u-md-1-3">
                                 <Card plant={plant}/>
                             </div>
                         )
