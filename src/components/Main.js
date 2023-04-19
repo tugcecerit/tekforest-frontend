@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
-import React from "react";
-import {Routes, Route} from 'react-router-dom'
+import { useEffect, useCallback, useState } from 'react'
+import {Routes, Route, Navigate} from 'react-router-dom'
+import Axios from 'axios'
+import React from 'react'
 import PlantNew from '../pages/PlantNew'
 import PlantEdit from '../pages/PlantEdit'
 import PlantShow from '../pages/PlantShow'
@@ -12,11 +13,17 @@ import UserPlantNew from '../pages/UserPlantNew'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Home from '../pages/Home'
+// import Register from '../pages/Register'
+// import Signin from '../pages/Signin'
+import Auth from './Auth'
+import { authContext } from '../context/authContext'
 
-import Register from '../pages/Register'
-import Signin from '../pages/Signin'
+// import Register from '../pages/Register'
+// import Signin from '../pages/Signin'
 import PlantCategories from '../pages/PlantCategories'
 import PlantsByCategory from '../pages/PlantsByCategory'
+
+let logoutTimer;
 
 const Main = (props) => {
 
@@ -43,6 +50,81 @@ const Main = (props) => {
 
     const [userPlants, setUserPlants] = React.useState([])
     const URL = "http://localhost:4000/plants/"
+    const [token, setToken] = useState(false);
+    const [tokenExpirationDate, setTokenExpirationDate] = useState();
+    const [userId, setUserId] = useState(false);
+    const [isLoading, setIsloading] = useState(true)
+
+    const signin = useCallback((uid, token, expirationDate) => {
+        setToken(token);
+        setUserId(uid);
+        setIsloading(false)
+        const tokenExpirationDate =
+          expirationDate || new Date(new Date().getTime() + 1000 * 60 * 60);
+        setTokenExpirationDate(tokenExpirationDate);
+        localStorage.setItem(
+          'userData',
+          JSON.stringify({
+            userId: uid,
+            token: token,
+            expiration: tokenExpirationDate.toISOString()
+          })
+        );
+        Axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    
+      }, []);
+
+    const signout = useCallback(() => {
+    setToken(null);
+    setTokenExpirationDate(null);
+    setUserId(null);
+    localStorage.removeItem('userData');
+    localStorage.removeItem('profileData');
+    let token = null
+    Axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+    }, []);
+
+    useEffect(() => {
+    if (token && tokenExpirationDate) {
+        const remainingTime = tokenExpirationDate.getTime() - new Date().getTime();
+        logoutTimer = setTimeout(signout, remainingTime);
+    } else {
+        clearTimeout(logoutTimer);
+    }
+    }, [token, signout, tokenExpirationDate]);
+    
+    useEffect(() => {
+        const storedData = JSON.parse(localStorage.getItem('userData'));
+        setIsloading(false)
+        if (
+          storedData &&
+          storedData.token &&
+          new Date(storedData.expiration) > new Date()
+        ) {
+          signin(storedData.userId, storedData.token, new Date(storedData.expiration));
+        }
+      }, [signin]);
+    
+      let route
+      let loading
+      if (isLoading) {
+        loading = (<>
+          <div className="container loading">
+            <div className="mar-20">
+             <h1>Loading</h1>
+            </div>
+          </div>
+        </>)
+      }
+      else {
+        route = (<>
+          {token ? <Route path="/plants/new" element={<PlantNew plants={plants} createPlant={createPlant}/>}></Route> : <Navigate to="/auth" />}
+          {token ? <Route path="/plants/:id/edit" element={<PlantEdit plants={plants}/>}></Route> : <Navigate to="/auth" />}
+          {token ? <Route path="/plants/:id" element={<PlantShow plants={plants}/>}></Route> : <Navigate to="/auth" />}
+        </>
+        )
+    }
 
     const getUserPlants = async() => {
         const response = await fetch(URL);
@@ -86,13 +168,21 @@ const Main = (props) => {
         getUserPlants()
     }, [])
     return (
-        
+        <authContext.Provider
+        value={{
+            isLoggedIn: !!token,
+            token: token,
+            userId: userId,
+            signin: signin,
+            signout: signout
+        }}
+        >
         <main>
             <Routes>
                 <Route path="/about" element={<About plants={plants}/>} />
                 <Route path="/contact" element={<Contact plants={plants}/>} />
-                <Route path="/register" element={<Register plants={plants}/>} />
-                <Route path="/signin" element={<Signin plants={plants}/>} />
+                <Route path="/signin" element={<Auth/>} />
+                <Route path="/register" element={<Auth/>} />
                 <Route path="/" element={<Home plants={plants}/>} />
                 <Route path="/categories" element={<PlantCategories plants={plants}/>} />
                 <Route path="/plantsByCategory/:categoryName" element={<PlantsByCategory />} />
@@ -108,6 +198,8 @@ const Main = (props) => {
                 <Route path="/plants/:id" element={<PlantShow plants={plants}/>} />
             </Routes>
         </main>
+        </authContext.Provider>
+        
     )
 }
 

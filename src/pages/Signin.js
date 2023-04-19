@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-// import { connect } from "react-redux";
-// import { loginUser } from "../actions/authActions";
-import classnames from "classnames";
 
 class Login extends Component {
   constructor() {
@@ -68,9 +65,9 @@ return (
                   error={errors.email}
                   id="email"
                   type="email"
-                  className={classnames("", {
-                    invalid: errors.email || errors.emailnotfound
-                  })}
+                  // className={classnames("", {
+                  //   invalid: errors.email || errors.emailnotfound
+                  // })}
                 />
                 <label htmlFor="email">Email</label>
                 <span className="red-text">
@@ -85,9 +82,9 @@ return (
                   error={errors.password}
                   id="password"
                   type="password"
-                  className={classnames("", {
-                    invalid: errors.password || errors.passwordincorrect
-                  })}
+                  // className={classnames("", {
+                  //   invalid: errors.password || errors.passwordincorrect
+                  // })}
                 />
                 <label htmlFor="password">Password</label>
                 <span className="red-text">
@@ -117,20 +114,7 @@ return (
   }
 }
 
-Login.propTypes = {
-    loginUser: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired,
-    errors: PropTypes.object.isRequired
-  };
 
-const mapStateToProps = state => ({
-    auth: state.auth,
-    errors: state.errors
-  });
 
-//  export default connect(
-//     mapStateToProps,
-//     { loginUser }
-//   )(Login);
 
 export default Login
