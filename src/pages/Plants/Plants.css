@@ -1,0 +1,42 @@
+  .plant-card {
+    background-color: #FFFFFF;
+    text-align: left;
+    width: 100%;
+    transition: all .4s ease;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px #b0b9b0;
+  }
+
+  .plant-card:hover {
+    box-shadow: 0 0 10px #556355;
+    color: #4e6e4e;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .plant-card img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .plant-card-body {
+    padding: 1.5rem 1rem;
+  }
+  .plant-card-body-name {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    
+  }
+  .card-link {
+    text-decoration: none;
+    color: #000;
+  }
+  .card-link :visited {
+    color: #000;
+  }
+  .plant-card-footer {
+    
+  }

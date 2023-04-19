@@ -1,10 +1,4 @@
 
-.App {
-  text-align: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
 
 /* .home {
   background-image: url("../public/home1.jpg");
@@ -208,30 +202,7 @@ Main {
   color:  rgb(77, 127, 96);
 } */
 
-.PlantsContainer {
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 6em 0;
-}
 
-.plant-card {
-  background-color: #FFFFFF;
-  text-align: left;
-  width: 300px;
-  height: 410px;
-  padding: 1em;
-  font-size: 14px;
-  margin: 0 1em 2em;
-  border-radius: 0.5em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.plant-card img {
-  display: block;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 0.5em 0.5em 0 0;
-}
 
 /* .category-dropdown {
   display: none;
@@ -268,16 +239,6 @@ Main {
   left: 10em;
 }
 
-.pure-form {
-  position: relative;
-  top: 10em;
-  left: 20em;
-}
-
-.pure-button {
-  border-radius: 5px;
-  background-color: green;
-}
 
 button {
   border: none;

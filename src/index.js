@@ -1,12 +1,12 @@
+import 'purecss/build/pure.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom'
-// import './normalize.css';
-// import './skeleton.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios'
+import './bootstrap-grid.min.css'
 
 // axios.defaults.baseURL = '//localhost:3000/api';
 let userData = JSON.parse(localStorage.getItem("userData"))
