@@ -15,14 +15,3 @@
     left: 10em;
   }
 
-  .pure-form {
-    position: relative;
-    top: 10em;
-    left: 20em;
-  }
-  
-  .pure-button {
-    border-radius: 5px;
-    background-color: green;
-  }
-

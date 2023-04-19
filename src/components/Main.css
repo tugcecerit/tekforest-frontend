@@ -2,4 +2,5 @@ Main {
     background-image: linear-gradient(gainsboro, white);
     background-size: cover;
     min-height: 100vh;
+    padding-top: 100px;
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import PlantCard from '../components/PlantCard'
+import Card from './components/Card'
 import {useParams} from "react-router-dom"
 
 const PlantsContainerByCategory = (props) => {
@@ -40,7 +40,7 @@ const PlantsContainerByCategory = (props) => {
                     {plants.map((plant) => {
                         return (
                             <div key={plant.id} className="pure-u-1 pure-u-md-1-4">
-                                <PlantCard plant={plant} />
+                                <Card plant={plant} />
                             </div>
                         )
                     })}

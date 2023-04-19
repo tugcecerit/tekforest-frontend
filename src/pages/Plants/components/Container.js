@@ -1,20 +1,16 @@
 import React from "react";
-import { useState } from "react";
-import {Link} from "react-router-dom"
-import PlantCard from './PlantCard'
+import Card from './Card'
 
 const PlantsContainer = (props) => {
-    console.log(props)
     const plants = props.plants
     
-
     return (
-        <div className="PlantsContainer">
-            <div className="pure-g">
+        <div className="container ">
+            <div className="row g-4">
                     {plants.map((plant) => {
                         return (
-                            <div key={plant.id} className="pure-u-1 pure-u-md-1-4">
-                                <PlantCard plant={plant}/>
+                            <div key={plant.id} className="col-12 col-lg-4 col-xxl-3">
+                                <Card plant={plant}/>
                             </div>
                         )
                     })}
