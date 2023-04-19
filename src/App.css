@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-.home {
+/* .home {
   background-image: url("../public/home1.jpg");
   background-size: cover;
   min-height: 100vh;
@@ -107,7 +107,6 @@ Main {
   height: 40em;
   border: none;
   border-radius: 50%;
-  /* background-color: rgba(105, 156, 133, 0.5); */
   background-color: #b0bfaf;
   position: absolute;
   bottom: 25%;
@@ -125,7 +124,6 @@ Main {
   left: 0;
   bottom: 0;
   width: 100%;
-  /* background-color: rgb(151, 151, 151, 0.5); */
   background-color: rgb(56, 64, 60, 0.6);
   padding: 1em;
   text-align: center;
@@ -208,7 +206,7 @@ Main {
 
 .link:hover {
   color:  rgb(77, 127, 96);
-}
+} */
 
 .PlantsContainer {
   max-width: 1700px;
@@ -304,4 +302,4 @@ button:active {
   transform: scale(1) translate(0, 0.15rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
-
+ */

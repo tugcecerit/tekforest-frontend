@@ -17,7 +17,7 @@ import Home from '../pages/Home'
 // import Signin from '../pages/Signin'
 import Auth from './Auth'
 import { authContext } from '../context/authContext'
-
+import './Main.css';
 // import Register from '../pages/Register'
 // import Signin from '../pages/Signin'
 import PlantCategories from '../pages/PlantCategories'

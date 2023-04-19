@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import PlantCategories from '../pages/PlantCategories';
+import './Header.css';
 
 const Header = (props) => {
   return (
