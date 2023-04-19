@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useState } from 'react'
 import {Routes, Route, Navigate} from 'react-router-dom'
 import Axios from 'axios'
-
+import React from 'react'
 import PlantNew from '../pages/PlantNew'
 import PlantEdit from '../pages/PlantEdit'
 import PlantShow from '../pages/PlantShow'
@@ -18,8 +18,8 @@ import Home from '../pages/Home'
 import Auth from './Auth'
 import { authContext } from '../context/authContext'
 
-import Register from '../pages/Register'
-import Signin from '../pages/Signin'
+// import Register from '../pages/Register'
+// import Signin from '../pages/Signin'
 import PlantCategories from '../pages/PlantCategories'
 import PlantsByCategory from '../pages/PlantsByCategory'
 
@@ -55,7 +55,7 @@ const Main = (props) => {
     const [userId, setUserId] = useState(false);
     const [isLoading, setIsloading] = useState(true)
 
-    const login = useCallback((uid, token, expirationDate) => {
+    const signin = useCallback((uid, token, expirationDate) => {
         setToken(token);
         setUserId(uid);
         setIsloading(false)
@@ -74,7 +74,7 @@ const Main = (props) => {
     
       }, []);
 
-    const logout = useCallback(() => {
+    const signout = useCallback(() => {
     setToken(null);
     setTokenExpirationDate(null);
     setUserId(null);
@@ -88,11 +88,11 @@ const Main = (props) => {
     useEffect(() => {
     if (token && tokenExpirationDate) {
         const remainingTime = tokenExpirationDate.getTime() - new Date().getTime();
-        logoutTimer = setTimeout(logout, remainingTime);
+        logoutTimer = setTimeout(signout, remainingTime);
     } else {
         clearTimeout(logoutTimer);
     }
-    }, [token, logout, tokenExpirationDate]);
+    }, [token, signout, tokenExpirationDate]);
     
     useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem('userData'));
@@ -102,9 +102,9 @@ const Main = (props) => {
           storedData.token &&
           new Date(storedData.expiration) > new Date()
         ) {
-          login(storedData.userId, storedData.token, new Date(storedData.expiration));
+          signin(storedData.userId, storedData.token, new Date(storedData.expiration));
         }
-      }, [login]);
+      }, [signin]);
     
       let route
       let loading
@@ -173,8 +173,8 @@ const Main = (props) => {
             isLoggedIn: !!token,
             token: token,
             userId: userId,
-            login: login,
-            logout: logout
+            signin: signin,
+            signout: signout
         }}
         >
         <main>
