@@ -3,9 +3,8 @@ import {Routes, Route, Navigate} from 'react-router-dom'
 import Axios from 'axios'
 import React from 'react'
 import PlantNew from '../pages/PlantNew'
-import PlantEdit from '../pages/PlantEdit'
 import PlantShow from '../pages/PlantShow'
-import PlantIndex from '../pages/PlantIndex'
+import Plants from '../pages/Plants/Plants'
 import UserPlants from '../pages/UserPlants/UserPlants'
 import UserPlantShow from '../pages/UserPlantShow'
 import UserPlantEdit from '../pages/UserPlantEdit'
@@ -21,7 +20,7 @@ import './Main.css';
 // import Register from '../pages/Register'
 // import Signin from '../pages/Signin'
 import PlantCategories from '../pages/PlantCategories'
-import PlantsByCategory from '../pages/PlantsByCategory'
+import PlantsByCategory from '../pages/Plants/PlantsByCategory'
 
 let logoutTimer;
 
@@ -120,7 +119,7 @@ const Main = (props) => {
       else {
         route = (<>
           {token ? <Route path="/plants/new" element={<PlantNew plants={plants} createPlant={createPlant}/>}></Route> : <Navigate to="/auth" />}
-          {token ? <Route path="/plants/:id/edit" element={<PlantEdit plants={plants}/>}></Route> : <Navigate to="/auth" />}
+          {token ? <Route path="/UserPlants/:id/edit" element={<UserPlantEdit plants={plants}/>}></Route> : <Navigate to="/auth" />}
           {token ? <Route path="/plants/:id" element={<PlantShow plants={plants}/>}></Route> : <Navigate to="/auth" />}
         </>
         )
@@ -186,15 +185,14 @@ const Main = (props) => {
                 <Route path="/" element={<Home plants={plants}/>} />
                 <Route path="/categories" element={<PlantCategories plants={plants}/>} />
                 <Route path="/plantsByCategory/:categoryName" element={<PlantsByCategory />} />
-                <Route path="/plants" element={<PlantIndex plants={plants}/>} />
+                <Route path="/plants" element={<Plants plants={plants}/>} />
                 <Route path="/userPlants" element={<UserPlants plants={userPlants}/>} />
                 <Route path="/userPlants/:id" element={<UserPlantShow plants={userPlants} deletePlant={deletePlant}/>}  />
                 <Route path="/userPlants/:id/edit" element={<UserPlantEdit plants={userPlants} updatePlant={updatePlant}/>} />
 
                 <Route path="/userPlants/new" element={<UserPlantNew createPlant={createPlant}/>} />
                 <Route path="/plants/new/:id" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
-                <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 
-                updatePlant={updatePlant}/>} />
+
                 <Route path="/plants/:id" element={<PlantShow plants={plants}/>} />
             </Routes>
         </main>

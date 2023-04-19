@@ -1,5 +1,3 @@
-
-
 const PlantCardImage = (props) => {
     return (
             
