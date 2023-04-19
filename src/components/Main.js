@@ -190,7 +190,7 @@ const Main = (props) => {
                 <Route path="/userPlants" element={<UserPlants plants={userPlants}/>} />
                 <Route path="/userPlants/:id" element={<UserPlantShow plants={userPlants} deletePlant={deletePlant}/>}  />
                 <Route path="/userPlants/:id/edit" element={<UserPlantEdit plants={userPlants} updatePlant={updatePlant}/>} />
-                
+
                 <Route path="/userPlants/new" element={<UserPlantNew createPlant={createPlant}/>} />
                 <Route path="/plants/new/:id" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
                 <Route path="/plants/:id/edit" element={<PlantEdit plants={plants} 

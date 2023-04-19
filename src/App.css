@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   min-height: 100vh;
@@ -16,7 +17,7 @@
   margin: 0;
   color: #F1EBE4;
   float: left;
-  font-family: optima;
+  font-family: 'Handlee', cursive;
   padding: 90px 150px;
   font-size: 70px;
 }
@@ -25,7 +26,6 @@
   margin: 0;
   color: #c8c2bb;
   float: left;
-  font-family: optima;
   padding: 80px 90px;
   font-size: 40px;
   width: 65%;
@@ -96,7 +96,6 @@ Main {
 
 .about-text {
   color: rgb(116, 115, 115);
-  font-family: optima;
   font-size: 1.3em;
   width: 600px;
   position: relative;
@@ -134,18 +133,17 @@ Main {
 }
 
 .nav {
-  display: flex;
-  flex-wrap: wrap;
-  position: fixed;
-  justify-content: space-around;
-  background-color: rgb(56, 64, 60, 0.6);
-  padding: 5px;
-  width: 100%;
-  margin: auto;
-  font-weight: bold;
-  z-index: 1;
-  font-family: optima;
-  font-size: 20px;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    background-color: rgb(56, 64, 60, 0.6);
+    /* background-color: rgb(151, 151, 151, 0.5); */
+    padding: 5px;
+    width: 100%;
+    margin: auto;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 20px;
 }
 
 .nav-item {
@@ -196,7 +194,6 @@ Main {
 }
 
 .link {
-  font-family: optima;
   text-decoration: none;
   cursor: pointer;
   padding-inline: 30px;
@@ -223,7 +220,6 @@ Main {
   width: 300px;
   height: 410px;
   padding: 1em;
-  font-family: optima;
   font-size: 14px;
   margin: 0 1em 2em;
   border-radius: 0.5em;
@@ -237,13 +233,12 @@ Main {
   border-radius: 0.5em 0.5em 0 0;
 }
 
-/* .category-dropdown {
+.category-dropdown {
   display: none;
   position: absolute;
   z-index: 1;
   background-color: rgb(56, 64, 60);
   border-radius: 5px;
-  font-family: optima;
   padding: 1rem;
   font-size: 18px;
 }
@@ -258,7 +253,6 @@ Main {
 
 .contact-us {
   background-image: url("../public/home.jpg");
-  font-family: optima;
   background-size: cover;
   min-height: 100vh;
   align-items: center;
@@ -269,7 +263,6 @@ Main {
   margin: 0;
   padding: 2%;
   color:rgb(67, 52, 52);
-  font-family: optima;
   position: relative;
   top: 5em;
   left: 10em;
