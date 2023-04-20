@@ -49,6 +49,7 @@ const Main = (props) => {
 
     const [userPlants, setUserPlants] = React.useState([])
     const URL = process.env.REACT_APP_BASE_URL
+    console.log(URL)
     const [token, setToken] = useState(false);
     const [tokenExpirationDate, setTokenExpirationDate] = useState();
     const [userId, setUserId] = useState(false);
