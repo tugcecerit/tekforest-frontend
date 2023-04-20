@@ -41,7 +41,7 @@ const Main = (props) => {
             const response = await fetch('https://house-plants2.p.rapidapi.com/all-lite', options)
             const data = await response.json();
             setPlants(data)
-            
+            console.log(data)
         } catch (err) {
             console.error(err.message);
         }
