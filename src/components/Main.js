@@ -48,7 +48,7 @@ const Main = (props) => {
     }
 
     const [userPlants, setUserPlants] = React.useState([])
-    const URL = "http://localhost:4000/plants/"
+    const URL = process.env.REACT_APP_BASE_URL
     const [token, setToken] = useState(false);
     const [tokenExpirationDate, setTokenExpirationDate] = useState();
     const [userId, setUserId] = useState(false);

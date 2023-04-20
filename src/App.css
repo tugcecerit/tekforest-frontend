@@ -131,15 +131,16 @@ Main {
     position: fixed;
     justify-content: space-around;
     background-color: rgb(56, 64, 60, 0.6);
-    background-color: rgb(151, 151, 151, 0.5); 
-    padding: 5px;
+    /* background-color: rgb(151, 151, 151, 0.5); */
+    /* padding: 5px;
     width: 100%;
     margin: auto;
     font-weight: bold;
     z-index: 1;
     font-size: 20px;
-}
-.nav-item {
+} */
+
+/* .nav-item {
   flex-basis: 200px;
 }
 
@@ -203,7 +204,7 @@ Main {
 
 
 
-.category-dropdown {
+/* .category-dropdown {
   display: none;
   position: absolute;
   z-index: 1;
@@ -261,4 +262,4 @@ button:hover {
 button:active {
   transform: scale(1) translate(0, 0.15rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
+} */
