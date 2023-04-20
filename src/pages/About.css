@@ -1,0 +1,36 @@
+.about {
+    background-image: linear-gradient(gainsboro, white);
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+.about h2 {
+    margin: 0;
+  }
+  
+  .about-text {
+    color: rgb(116, 115, 115);
+    font-size: 1.3em;
+    width: 600px;
+    position: relative;
+    padding: 10%;
+  }
+
+  .bg {
+    width: 40em;
+    height: 40em;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(105, 156, 133, 0.5);
+    background-color: #b0bfaf;
+    position: absolute;
+    bottom: 25%;
+    left: 54%;
+  }
+
+  .plant {
+    position: absolute;
+    bottom: 18%;
+    left: 55%;
+  }

@@ -1,0 +1,17 @@
+.contact-us {
+    background-image: url("../../public/home.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .contact-us h1 {
+    margin: 0;
+    padding: 2%;
+    color:rgb(67, 52, 52);
+    position: relative;
+    top: 5em;
+    left: 10em;
+  }
+

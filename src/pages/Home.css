@@ -1,0 +1,53 @@
+.home {
+    background-image: url("../../public/home1.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+  }
+  
+  .home h1 {
+    margin: 0;
+    color: #F1EBE4;
+    float: left;
+    padding: 100px 140px;
+    font-size: 5rem;
+  }
+  
+  .home h3 {
+    margin: 0;
+    color: #c8c2bb;
+    float: left;
+    padding: 10px 90px;
+    font-size: 3rem;
+    width: 70%;
+  }
+
+  .home-img {
+    position: fixed;
+    bottom: -10%;
+    top: -10%;
+    left: 78%;
+    width: 22%;
+  }
+
+  .transparent-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    align-items: center;
+    height: 75%;
+    width: 85%;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(15px);
+  }
+
+  .home button {
+    position: relative;
+    top: 65%;
+    left: -50%;
+    margin: 10px 20px;
+    border-radius: 10px;
+  }
