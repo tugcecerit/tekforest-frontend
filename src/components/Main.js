@@ -165,6 +165,7 @@ const Main = (props) => {
       useEffect(() => {
         getPlants()
         getUserPlants()
+        console.log(getPlants)
     }, [])
     return (
         <authContext.Provider
