@@ -1,7 +1,6 @@
 .index {
   padding-top: 5rem;
-    background: rgb(228,238,228);
-    background: linear-gradient(133deg, rgb(219, 230, 219) 0%, rgba(170,201,164,1) 100%);
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
     min-height: 100vh;
 }
 .index .container {
