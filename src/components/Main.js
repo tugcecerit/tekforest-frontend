@@ -12,13 +12,9 @@ import UserPlantNew from '../pages/UserPlantNew'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Home from '../pages/Home'
-// import Register from '../pages/Register'
-// import Signin from '../pages/Signin'
 import Auth from './Auth'
 import { authContext } from '../context/authContext'
 import './Main.css';
-// import Register from '../pages/Register'
-// import Signin from '../pages/Signin'
 import PlantCategories from '../pages/PlantCategories'
 import PlantsByCategory from '../pages/Plants/PlantsByCategory'
 
@@ -41,7 +37,6 @@ const Main = (props) => {
             const response = await fetch('https://house-plants2.p.rapidapi.com/all-lite', options)
             const data = await response.json();
             setPlants(data)
-            console.log(data)
         } catch (err) {
             console.error(err.message);
         }
@@ -49,7 +44,6 @@ const Main = (props) => {
 
     const [userPlants, setUserPlants] = React.useState([])
     const URL = process.env.REACT_APP_BASE_URL
-    console.log(URL)
     const [token, setToken] = useState(false);
     const [tokenExpirationDate, setTokenExpirationDate] = useState();
     const [userId, setUserId] = useState(false);
@@ -144,8 +138,6 @@ const Main = (props) => {
     }
 
     const updatePlant = async (plant, id) => {
-        console.log(plant)
-        console.log(id)
         await fetch(URL + id, {
             method: "PUT",
             headers: {
@@ -167,6 +159,7 @@ const Main = (props) => {
         getPlants()
         getUserPlants()
     }, [])
+
     return (
         <authContext.Provider
         value={{
@@ -177,7 +170,7 @@ const Main = (props) => {
             signout: signout
         }}
         >
-        <main>
+        <main className="main-container">
             <Routes>
                 <Route path="/about" element={<About plants={plants}/>} />
                 <Route path="/contact" element={<Contact plants={plants}/>} />
@@ -190,15 +183,12 @@ const Main = (props) => {
                 <Route path="/userPlants" element={<UserPlants plants={userPlants}/>} />
                 <Route path="/userPlants/:id" element={<UserPlantShow plants={userPlants} deletePlant={deletePlant}/>}  />
                 <Route path="/userPlants/:id/edit" element={<UserPlantEdit plants={userPlants} updatePlant={updatePlant}/>} />
-
                 <Route path="/userPlants/new" element={<UserPlantNew createPlant={createPlant}/>} />
                 <Route path="/plants/new/:id" element={<PlantNew plants={plants} createPlant={createPlant}/>} />
-
-                <Route path="/plants/:id" element={<PlantShow plants={plants}/>} />
+                <Route path="/plants/:id" element={<PlantShow plants={plants} />}/>
             </Routes>
         </main>
         </authContext.Provider>
-        
     )
 }
 

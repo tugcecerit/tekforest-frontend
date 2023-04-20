@@ -1,0 +1,17 @@
+.plant-show-image {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.plant-show-name {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+.plant-show-data p {
+    font-size: 1.5rem;
+    
+}
+.plant-show-data p > span {
+    font-weight: bold;
+}

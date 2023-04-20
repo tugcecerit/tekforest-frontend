@@ -6,6 +6,7 @@ const PlantsContainer = (props) => {
     
     return (
         <div className="container ">
+            <h1>Plants Index</h1>
             <div className="row g-4">
                     {plants.map((plant) => {
                         return (

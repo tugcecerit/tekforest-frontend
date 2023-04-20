@@ -1,29 +1,44 @@
-import { useState } from "react";
-import {useParams, useNavigate} from "react-router-dom"
+import {useParams} from "react-router-dom"
+import './PlantShow.css';
 
 const PlantShow= (props) => {
     const params = useParams()
-    const navigate = useNavigate()
     const id = params.id
     const plants = props.plants
-    console.log(props)
     const plant = plants.find((p) => p.id === id)
-    console.log(plant)
+
+    const loaded = () => {
+        return (
+            <div className="plant-show container">
+                <div className="row">
+                    <div className="col-12 col-md-6">
+                        <img className="plant-show-image"  src={plant.Img}/>
+                    </div>
+                    <div className="plant-show-data col-12 col-md-6">
+                        <h1 className="plant-show-name">{plant['Common name']}</h1>
+                        <p><span>Categories: </span>{plant['Categories']}</p>
+                        <p><span>Climat: </span>{plant['Climat']}</p>
+                        <p><span>Common name (fr.): </span>{plant['Common name (fr.)']}</p>
+                        <p><span>Latin name: </span>{plant['Latin name']}</p>
+                        <p><span>Description: </span>{plant['Description']}</p>
+                        <p><span>Family: </span>{plant['Family']}</p>
+                        <p><span>Origin: </span>{plant['Origin']}</p>
+                        <p><span>Other names: </span>{plant['Other names']}</p>
+                        <p><span>Zone: </span>{plant['Zone']}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    const loading = () => {
+        return <h1>Loading...</h1>
+    }
 
     return (
-        <div>
-            <img src={plant.Img}/>
-            <h1>{plant['Common name']}</h1>
-            <p><b>Categories: </b>{plant['Categories']}</p>
-            <p><b>Climat: </b>{plant['Climat']}</p>
-            <p><b>Common name (fr.): </b>{plant['Common name (fr.)']}</p>
-            <p><b>Latin name: </b>{plant['Latin name']}</p>
-            <p><b>Description: </b>{plant['Description']}</p>
-            <p><b>Family: </b>{plant['Family']}</p>
-            <p><b>Origin: </b>{plant['Origin']}</p>
-            <p><b>Other names: </b>{plant['Other names']}</p>
-            <p><b>Zone: </b>{plant['Zone']}</p>
-        </div>
+        <>
+        {props.plants.length > 0 ? loaded() : loading()}
+        </>
     )
 }
 

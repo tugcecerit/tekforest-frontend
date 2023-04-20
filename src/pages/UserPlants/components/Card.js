@@ -11,7 +11,6 @@ const Card = (props) => {
             <CardBody plant={plant} />
             <CardFooter plant={plant} />
         </div>
-
     )
 }
 

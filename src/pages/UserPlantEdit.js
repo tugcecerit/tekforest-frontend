@@ -8,6 +8,7 @@ const UserPlantEdit = (props) => {
     const id = params.id
     const plants = props.plants
     const plant = plants.find((p) => p._id === id)
+    
     // state to hold all form data
     const [form, setForm] = useState({
         commonName: `${plant.commonName}`,
@@ -18,7 +19,6 @@ const UserPlantEdit = (props) => {
     // handle changes in the form
     const handleChanges = (event) => {
         setForm({ ...form, [event.target.name]: event.target.value })
-        console.log(form)
     }
 
     // handle the submission of the form
@@ -31,31 +31,43 @@ const UserPlantEdit = (props) => {
         })
     }
 
+    const loaded = () => {
+        return (
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={form.commonName}
+                    name="commonName"
+                    placeholder="Common Name"
+                    onChange={handleChanges}
+                />
+                <input
+                    type="text"
+                    value={form.image}
+                    name="image"
+                    placeholder="Image URL"
+                    onChange={handleChanges}
+                />
+                <input
+                    type="text"
+                    value={form.category}
+                    name="category"
+                    placeholder="Category"
+                    onChange={handleChanges}
+                />
+                <input type="submit" value="Update" />
+            </form>
+        )
+    }
+
+    const loading = () => {
+        return <h1>Loading...</h1>
+    }
+
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={form.commonName}
-                name="commonName"
-                placeholder="Common Name"
-                onChange={handleChanges}
-            />
-            <input
-                type="text"
-                value={form.image}
-                name="image"
-                placeholder="Image URL"
-                onChange={handleChanges}
-            />
-            <input
-                type="text"
-                value={form.category}
-                name="category"
-                placeholder="Category"
-                onChange={handleChanges}
-            />
-            <input type="submit" value="Update" />
-        </form>
+        <>
+        {props.plants.length > 0 ? loaded() : loading()}
+        </>
     )
 }
 
