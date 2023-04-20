@@ -1,16 +1,26 @@
 import React from "react";
 import Container from './components/Container'
-import Button from '../../components/Button'
+import './UserPlants.css';
 
 const UserPlants = (props) => {
-        const plants = props.plants
+    const plants = props.plants
+    const loaded = () => {
         return (
-        <section className="index">
-            <h1>User Plants</h1>
-            <Button to={`/userPlants/new`}  label="NEW" />
-            <Container plants={plants}/>
-        </section>
+            <section className="index">
+                <Container plants={plants}/>
+            </section>
         )
+    }
+
+    const loading = () => {
+        return <h1>Loading...</h1>
+    }
+
+    return (
+        <>
+        {props.plants.length > 0 ? loaded() : loading()}
+        </>
+    )
 }
 
 export default UserPlants;

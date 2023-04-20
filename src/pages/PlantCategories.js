@@ -17,8 +17,6 @@ const Categories = (props) => {
         try {
             const response = await fetch('https://house-plants2.p.rapidapi.com/categories', options);
             const data = await response.json();
-            console.log('Data')
-            console.log(data)
             setCategories(data);
             
         } catch (err) {
@@ -31,10 +29,7 @@ const Categories = (props) => {
     }, []);
 
     const loaded = () => {
-        console.log('Categories')
-            console.log(categories)
         return (
-            
             <div className="PlantCategories">
                 <div className="pure-g">
                     {categories.map((category) => {

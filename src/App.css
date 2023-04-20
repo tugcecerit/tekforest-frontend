@@ -263,3 +263,6 @@ button:active {
   transform: scale(1) translate(0, 0.15rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 } */
+*, *:before, *:after {
+  box-sizing: border-box;
+}

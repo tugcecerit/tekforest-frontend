@@ -20,7 +20,6 @@ const PlantsContainerByCategory = (props) => {
             const response = await fetch(`https://house-plants2.p.rapidapi.com/category/${category}`, options);
             const data = await response.json();
             setPlants(data);
-            console.log(plants)
         } catch (err) {
             console.error(err.message)
         }
@@ -28,7 +27,6 @@ const PlantsContainerByCategory = (props) => {
 
     React.useEffect(() => {
         getPlantsByCategory(props.category);
-        console.log("test")
     }, [params]);
 
     const loaded = () => {

@@ -7,14 +7,11 @@ import CardFooter from './CardFooter'
 const PlantCard = (props) => {
     const plant = props.plant
     return (
-        <Link className="card-link" to={`/plants/${plant.id}`}>
-            <div className="plant-card">
-                <CardImage image={plant.Img}/>
-                <CardBody plant={plant} />
-                <CardFooter plant={plant} />
-            </div>
-        </Link>
-
+        <div className="plant-card">
+            <CardImage image={plant.Img}/>
+            <CardBody plant={plant} />
+            <CardFooter plant={plant} />
+        </div>
     )
 }
 

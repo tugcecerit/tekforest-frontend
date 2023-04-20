@@ -1,12 +1,12 @@
-import Button from '../../../components/Button'
+import {Link} from "react-router-dom"
 
 const CardFooter = (props) => {
     const plant = props.plant
     return (
-        <>
-            <Button to={`/userPlants/${plant._id}`}  label="VIEW" />
-            <Button to={`/userPlants/${plant._id}/edit`}  label="UPDATE" />
-        </>
+        <div className="plant-card-footer">
+            <Link to={`/userPlants/${plant._id}`} >VIEW</Link>
+            <Link to={`/userPlants/${plant._id}/edit`} >UPDATE</Link>
+        </div>
     )
 }
 
