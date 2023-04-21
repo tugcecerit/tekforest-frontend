@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import validateForm from '../utils/validateForm'
 import emailRegex from '../utils/emailRegex'
 import { authContext } from '../context/authContext'
-
+import './Auth.css';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 function withRouter(Component) {
