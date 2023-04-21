@@ -22,6 +22,106 @@
   top: -20%;
 }
 
-.contact-us-form {
+.pure-form {
   min-width: 130rem;
+}
+
+.contact-us-button .link {
+  margin: 0px;
+  font-size: 20px;
+  color: white;
+
+}
+
+.contact-us-button button:first-of-type{
+  margin-right: 3rem;
+}
+
+.home-button .link {
+  margin: -23px;
+  font-size: 20px;
+  color: white;
+
+}
+
+@media (max-width: 1280px) {
+  .pure-form {
+    min-width: 80rem;
+  }
+  .contact-us-content {
+    padding: 60px 150px 0 0;
+  }
+  .contact-us h1 {
+    color:rgb(67, 52, 52);
+    position: absolute;
+    left: 13%;
+    top: -5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pure-form {
+    min-width: 130rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  .contact-us-content {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 0 300px;
+  }
+  .contact-us h1 {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    margin: auto;
+    color: white;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pure-form {
+    min-width: 100rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  .contact-us-content {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 0 230px;
+  }
+  .contact-us h1 {
+    position: absolute;
+    top: -5%;
+    left: 23%;
+    margin: auto;
+    color: white;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 568px) {
+  .pure-form {
+    min-width: 70rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  .contact-us-content {
+    position: relative;
+    left: 20%;
+    top: 20%;
+    padding: 60px 0px 0 300px;
+  }
+  .contact-us h1 {
+    position: absolute;
+    top: -5%;
+    left: 35%;
+    margin: auto;
+    color: white;
+    font-size: 40px;
+  }
 }
