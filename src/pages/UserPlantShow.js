@@ -1,4 +1,5 @@
 import {useParams, useNavigate} from "react-router-dom"
+import './UserPlantShow.css';
 
 const UserPlantShow= (props) => {
     const params = useParams()
@@ -13,7 +14,7 @@ const UserPlantShow= (props) => {
     }
     const loaded = () => {
         return (
-            <div>
+            <div className="user-plant-show">
 
             <button id="delete" onClick={deletePlant}>DELETE</button>
                 <img src={plant.image}/>
