@@ -5,7 +5,7 @@ import './Button.css';
 const Button = (props) => {
     const { to, label } = props;
     return (
-        <button>
+        <button className='button'>
             <Link to={to} className='link'>{label}</Link>
         </button>
     )

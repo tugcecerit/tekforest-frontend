@@ -1,23 +1,23 @@
 .plantsContainer {
-    padding-top: 5rem;
-    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-    min-height: 100vh;
-  }
-  
-  .plantsContainer h1 {
-    font-size: 4rem;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 0;
-    padding: 2rem 0;
-  }
-  
-  .pure-g {
-    margin: auto;
-    max-width: 100rem;
-  }
-  
-  .pure-u-1 {
-    padding: 0.5rem;
-    max-width: 20rem;
-  }
+  padding-top: 5rem;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  min-height: 100vh;
+}
+
+.plantsContainer h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  padding: 2rem 0 0 0;
+}
+
+.pure-g {
+  margin: auto;
+  max-width: 100rem;
+}
+
+.pure-u-1 {
+  padding: 0.5rem;
+  max-width: 20rem;
+}

@@ -175,7 +175,7 @@ const Main = (props) => {
                 <Route path="/about" element={<About plants={plants}/>} />
                 <Route path="/contact" element={<Contact plants={plants}/>} />
                 <Route path="/signin" element={<Auth/>} />
-                {/* <Route path="/register" element={<Auth/>} /> */}
+                <Route path="/register" element={<Auth/>} />
                 <Route path="/" element={<Home plants={plants}/>} />
                 <Route path="/categories" element={<PlantCategories plants={plants}/>} />
                 <Route path="/plantsByCategory/:categoryName" element={<PlantsByCategory />} />

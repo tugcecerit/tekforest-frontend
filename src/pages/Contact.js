@@ -1,5 +1,6 @@
 import React from 'react';
 import './Contact.css';
+import { Link } from 'react-router-dom';
 
 const Contact = (props) => {
     const handleAlert = (e) => {
@@ -34,7 +35,12 @@ const Contact = (props) => {
                         <label htmlFor="aligned-cb" className="pure-checkbox">
                             <input type="checkbox" id="aligned-cb" /> I&#x27;ve read the terms and conditions
                         </label><br></br><br></br>
-                        <button onClick={handleAlert} type="submit">Submit</button>
+                        <div className='contact-us-button'>
+                        <button onClick={handleAlert} type="submit" className='link'>Submit</button>
+                        <button className='home-button'>
+                            <Link to="/" className='link'>Home</Link>
+                        </button>
+                        </div>
                     </div>
                 </fieldset>
             </form>
@@ -45,4 +51,3 @@ const Contact = (props) => {
 }
 
 export default Contact;
-
