@@ -4,6 +4,8 @@
     min-height: 100vh;
     align-items: center;
     width: 100%;
+    position: relative;
+    
   }
   
   .contact-us h1 {
