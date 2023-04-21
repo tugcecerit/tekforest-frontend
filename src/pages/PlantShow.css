@@ -1,6 +1,19 @@
+
+.plant-show {
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+.container {
+    margin-top: 5rem;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #fff;
+}
 .plant-show-image {
     width: 100%;
-    border-radius: 1rem;
 }
 
 .plant-show-name {
