@@ -6,27 +6,24 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 20% 0;
+    padding: 15% 0;
   }
 
   .contact-us-container{
-    display: flex;
-    flex-direction: row;
-    position: fixed;
+    position: relative;
+    left: 60%;
+    top: 20%;
   }
 
   .pure-form {
-    position: relative;
-    left: 45%;
-    width: 140em;
+    min-width: 130rem;
   }
   
   .contact-us h1 {
-    margin: 0;
     color:rgb(67, 52, 52);
     position: absolute;
+    left: 10%;
     top: -20%;
-    left: 55%;
   }
   
 
