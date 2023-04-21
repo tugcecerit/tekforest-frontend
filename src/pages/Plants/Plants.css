@@ -1,7 +1,7 @@
 .index {
   padding-top: 5rem;
   background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-    min-height: 100vh;
+  min-height: 100vh;
 }
 .index .container {
   padding: 2rem 0;

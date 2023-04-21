@@ -35,11 +35,11 @@ const Header = (props) => {
               <Link to='/contact' className='link'>
                 CONTACT US
               </Link>
-              <Link to='/register' className='link'>
+              {/* <Link to='/register' className='link'>
                 REGISTER
-              </Link>
+              </Link> */}
               <Link to='/signin' className='link'>
-                SIGN IN 
+                SIGN IN / REGISTER
               </Link>
             </div>
           </div>
