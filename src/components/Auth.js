@@ -5,6 +5,7 @@ import emailRegex from '../utils/emailRegex'
 import { authContext } from '../context/authContext'
 import './Auth.css';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function withRouter(Component) {
     function ComponentWithRouterProp(props) {
@@ -165,7 +166,11 @@ export class Auth extends Component {
                             className="btn btn-primary"
                             onClick={this.switchLoginhandler}
                         >{this.state.isLoginMode ? 'Register' : 'Sign In'} </button>
-                    </div>
+                    </div><br></br>
+
+                    <button className='home-button-auth'>
+                            <Link to="/" className='link'>Home</Link>
+                </button>
                 </form>
 
             </div>
