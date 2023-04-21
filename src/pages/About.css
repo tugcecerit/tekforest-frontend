@@ -1,36 +1,47 @@
 .about {
-    background-image: linear-gradient(gainsboro, white);
-    background-size: cover;
-    min-height: 100vh;
-    align-items: center;
-  }
+  background-image: linear-gradient(gainsboro, white);
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 .about h2 {
-    margin: 0;
-  }
-  
-  .about-text {
-    color: rgb(116, 115, 115);
-    font-size: 1.3em;
-    width: 600px;
-    position: relative;
-    padding: 10%;
-  }
+  margin: 0;
+}
 
-  .bg {
-    width: 40em;
-    height: 40em;
-    border: none;
-    border-radius: 50%;
-    background-color: rgba(105, 156, 133, 0.5);
-    background-color: #b0bfaf;
-    position: absolute;
-    bottom: 25%;
-    left: 54%;
-  }
+.about-content {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 0 5rem;
+  justify-content: space-around;
+}
 
-  .plant {
-    position: absolute;
-    bottom: 18%;
-    left: 55%;
-  }
+.about-text {
+  color: rgb(116, 115, 115);
+  font-size: 1.3em;
+  width: 600px;
+  margin: 4rem 10rem 3rem 0;
+  float: left;
+}
+
+.bg {
+  width: 40em;
+  height: 40em;
+  border: none;
+  border-radius: 50%;
+  background-color: #b0bfaf;
+  margin: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.plant {
+  position: absolute;
+  margin-top: -55.5em;
+  margin-left: 2em;
+  z-index: 1;
+}

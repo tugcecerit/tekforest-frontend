@@ -3,26 +3,26 @@ import React, { Component } from 'react'
 import validateForm from '../utils/validateForm'
 import emailRegex from '../utils/emailRegex'
 import { authContext } from '../context/authContext'
-
+import './Auth.css';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 function withRouter(Component) {
-  	function ComponentWithRouterProp(props) {
-    	let location = useLocation();
-    	let navigate = useNavigate();
-    	let params = useParams();
-    	return (
-      		<Component
-        		{...props}
-        		location={location}
-        		params={params}
-        		navigate={navigate}
-      		/>
-    	);
-  	}
+    function ComponentWithRouterProp(props) {
+        let location = useLocation();
+        let navigate = useNavigate();
+        let params = useParams();
+        return (
+            <Component
+                {...props}
+                location={location}
+                params={params}
+                navigate={navigate}
+            />
+        );
+    }
 
-	
-  	return ComponentWithRouterProp;
+    
+    return ComponentWithRouterProp;
 }
 
 // import { withRouter } from 'react-router-dom'
@@ -92,6 +92,7 @@ export class Auth extends Component {
         this.setState({
             user: { ...this.state.user, email: '', password: '' }
         });
+        console.log(this.state.user)
     }
 
 
@@ -113,12 +114,12 @@ export class Auth extends Component {
     render() {
 
         return (<>       
-            <div className="container container-short py-5">
-                <h1 className="pt-2 py-2">{this.state.isLoginMode ? 'Sign In ' : 'Register'}</h1>
-                <hr></hr>
-                <form onSubmit={this.mySubmitHandler} className="pt-4">
+            <div className="container container-short py-5"><br></br><br></br>
+                <h1 className="pure-control-group">{this.state.isLoginMode ? 'Sign In ' : 'Register'}</h1>
+                <hr></hr><br></br>
+                <form onSubmit={this.mySubmitHandler} className="pure-form pure-form-aligned">
                     <div className="form-group">
-                        <label htmlFor="email">Email </label>
+                        <label htmlFor="email"> Email Adr : </label>
                         <input
                             type='email'
                             name='email'
@@ -130,10 +131,10 @@ export class Auth extends Component {
                         />
                         {this.state.errors.email.length > 0 &&
                             <div className="mt-1"><span className='error text-danger'>{this.state.errors.email}</span></div>}
-                    </div>
+                    </div><br></br>
 
                     <div className="form-group">
-                        <label htmlFor="password">Password </label>
+                        <label htmlFor="password">Password  : </label>
                         <input
                             type='password'
                             name='password'
@@ -147,7 +148,7 @@ export class Auth extends Component {
                         {this.state.errors.password.length > 0 &&
                             <div className="mt-1"> <span className='error text-danger'>{this.state.errors.password}</span></div>}
 
-                    </div>
+                    </div><br></br>
 
                     <div className="form-group">
                         <button style={{ marginRight: '15px' }}
