@@ -4,7 +4,7 @@
     bottom: 0;
     width: 100%;
     background-color: rgb(56, 64, 60, 0.6);
-    padding: 1em;
+    padding: 0.5em;
     text-align: center;
     font-size: 12px;
     font-weight: bold;
@@ -12,5 +12,5 @@
   }
 
   .social-media {
-    padding: 0 10px;
+    margin: 0 10px 8px 5px;
   }

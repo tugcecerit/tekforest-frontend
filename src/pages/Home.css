@@ -5,7 +5,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
   
   .home h1 {
@@ -18,7 +17,6 @@
   .home p {
     margin: 0;
     margin: 3rem 0 5rem 0;
-    /* margin-top: 3rem; */
     color: #f7f5f4;
     float: left;
     font-size: 2.5rem;
@@ -45,7 +43,6 @@
   }
 
   .home-content-buttons {
-    /* margin-top: 5rem; */
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -84,10 +81,8 @@
     .home p {
       font-size: 1.5rem;
     }
-
-    
-
   }
+  
   @media (max-width: 568px) {
     .home-content-buttons {
       flex-direction: column;

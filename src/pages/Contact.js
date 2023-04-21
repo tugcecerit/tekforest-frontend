@@ -8,7 +8,8 @@ const Contact = (props) => {
         window.location.href = '/';
     }
     return (
-        <div className='contact-us'>           
+        <div className='contact-us'>   
+        <div className='contact-us-container'> 
             <h1>CONTACT US</h1> 
             <form className="pure-form pure-form-aligned">
                 <fieldset>
@@ -37,6 +38,7 @@ const Contact = (props) => {
                 </fieldset>
             </form>
         </div>
+        </div>       
     )
 }
 

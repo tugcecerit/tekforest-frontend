@@ -19,6 +19,8 @@
       width: 100%;
       overflow: hidden;
       box-shadow: 0 0 3px #afb1af;
+      border-radius: 8px;
+      height: 530px;
     }
   
     
@@ -28,6 +30,7 @@
       width: 500px;
       height: 300px;
       overflow: clip;
+      border-radius: 5px;
     }
     .plant-card-body {
       padding: 1rem 0;

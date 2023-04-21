@@ -1,6 +1,7 @@
 import React from "react";
 import Card from './components/Card'
 import {useParams} from "react-router-dom"
+import './PlantsByCategory.css';
 
 const PlantsContainerByCategory = (props) => {
     const [plants, setPlants] = React.useState([]);
@@ -32,7 +33,7 @@ const PlantsContainerByCategory = (props) => {
     const loaded = () => {
         return (
             
-            <div className="PlantsContainer">
+            <div className="plantsContainer">
                 <h1>{category}</h1>
                 <div className="pure-g">
                     {plants.map((plant) => {
