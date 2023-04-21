@@ -4,7 +4,7 @@
     position: fixed;
     justify-content: space-around;
     background-color: rgb(56, 64, 60, 0.8);
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     margin: auto;
     font-weight: bold;
@@ -86,9 +86,8 @@
     z-index: 1;
     background-color: rgb(56, 64, 60);
     border-radius: 5px;
-    padding: 0.2rem;
+    padding: 1rem;
     font-size: 18px;
-    width: 250px;
   }
 
   .logo {
