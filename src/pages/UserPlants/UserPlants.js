@@ -18,7 +18,7 @@ const UserPlants = (props) => {
 
     return (
         <>
-        {props.plants.length > 0 ? loaded() : loading()}
+        {props.plants.length >= 0 ? loaded() : loading()}
         </>
     )
 }
