@@ -1,53 +1,112 @@
 .home {
     background-image: url("../../public/home1.jpg");
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   
   .home h1 {
     margin: 0;
-    color: #F1EBE4;
-    float: left;
-    padding: 100px 140px;
-    font-size: 5rem;
+    color: #f7f5f4;
+    font-size: 4rem;
+    font-family: 'Handlee', cursive;
   }
   
-  .home h3 {
+  .home p {
     margin: 0;
-    color: #c8c2bb;
+    margin: 3rem 0 5rem 0;
+    /* margin-top: 3rem; */
+    color: #f7f5f4;
     float: left;
-    padding: 10px 90px;
-    font-size: 3rem;
-    width: 70%;
+    font-size: 2.5rem;
+    font-weight: 300;
   }
 
-  .home-img {
-    position: fixed;
-    bottom: -10%;
-    top: -10%;
-    left: 78%;
-    width: 22%;
-  }
 
   .transparent-box {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    align-items: center;
-    height: 75%;
+    height: 70%;
     width: 85%;
     border-radius: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: row;
   }
 
-  .home button {
-    position: relative;
-    top: 65%;
-    left: -50%;
-    margin: 10px 20px;
-    border-radius: 10px;
+  .home-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 5rem;
+    justify-content: center;
   }
+
+  .home-content-buttons {
+    /* margin-top: 5rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+  .home-content-buttons button:first-of-type{ 
+    margin-right: 3rem;
+  }
+  .home-img {
+    margin-bottom: -3rem;
+    margin-top: -3rem;
+  }
+
+  @media (max-width: 1280px) {
+    .home-img {
+      display: none;
+    }
+    .home-content {
+      padding: 0 3rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    .home h1 {
+      font-size: 3.5rem;
+    }
+    
+    .home p {
+      font-size: 2em;
+      margin: 2rem 0 3rem 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .home h1 {
+      font-size: 2.75rem;
+    }
+    
+    .home p {
+      font-size: 1.5rem;
+    }
+
+    
+
+  }
+  @media (max-width: 568px) {
+    .home-content-buttons {
+      flex-direction: column;
+    }
+    
+    .home-content-buttons button:first-of-type {
+      margin: 0 0 1rem 0;
+    }
+    .home p {
+      font-weight: 400;
+    }
+    .transparent-box {
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+      backdrop-filter: blur(4px);
+    }
+    .home-content {
+      padding: 0 1.5rem;
+    }
+  }
+  
