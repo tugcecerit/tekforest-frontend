@@ -115,13 +115,14 @@ export class Auth extends Component {
     render() {
 
         return (<>       
-            <div className="container container-short py-5"><br></br><br></br>
+            <div className="signin container container-short py-5"><br></br><br></br>
+            <div className="signin-content">
                 <h1 className="pure-control-group">{this.state.isLoginMode ? 'Sign In ' : 'Register'}</h1>
                 <hr></hr><br></br>
-                <div className='signin-pic'>
+                {/* <div className='signin'>
                     <img className="signin-img" src="../signin.jpg"></img>
-                </div>  
-                <form onSubmit={this.mySubmitHandler} className="pure-form pure-form-aligned">
+                </div>   */}
+                <form onSubmit={this.mySubmitHandler} className="signin-form pure-form pure-form-aligned">
                     <div className="form-group">
                         <label htmlFor="email"> Email: </label>
                         <input
@@ -177,6 +178,7 @@ export class Auth extends Component {
                             <Link to="/" className='link'>Home</Link>
                 </button>
                 </form>   
+                </div>
             </div>
         </>
         )
