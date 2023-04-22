@@ -1,11 +1,13 @@
 import React from "react";
 import Card from './components/Card'
 import {useParams} from "react-router-dom"
+import Container from './components/Container'
 import './PlantsByCategory.css';
 
 const PlantsContainerByCategory = (props) => {
     const [plants, setPlants] = React.useState([]);
     const apiKey = process.env.REACT_APP_PLANT_API_KEY;
+    console.log(plants)
     const params = useParams()
     const category = params.categoryName
     const options = {
@@ -32,26 +34,18 @@ const PlantsContainerByCategory = (props) => {
 
     const loaded = () => {
         return (
-            
-            <div className="plantsContainer">
-                <h1>{category}</h1>
-                <div className="pure-g">
-                    {plants.map((plant) => {
-                        return (
-                            <div key={plant.id} className="pure-u-1 pure-u-md-1-4">
-                                <Card plant={plant} />
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
+            <>
+                <section className="index">
+                    <Container plants={plants} category={category}/>
+                </section>
+                </>
         )
     }
 
     const loading = () => {
         return <h1>Loading...</h1>
     }
-    return plants ? loaded() : loading()
+    return plants.length ? loaded() : loading()
 }
 
 export default PlantsContainerByCategory;
