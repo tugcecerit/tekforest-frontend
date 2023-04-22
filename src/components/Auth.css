@@ -2,15 +2,37 @@
     padding: 10px;
     left: 0;
 }
-
 button {
     font-size: 20px;
 }
-
 .home-button-auth {
     width: 12.8em;
 }
-
 .home-button-auth .link {
     color: white;
+}
+.signin-pic {
+    margin: 0;
+}
+.signin-img {
+    width: 50%;
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .container .pure-form {
+        padding: 10px;
+        display: grid;
+        justify-content: center;
+    }
+    .signin-pic {
+        margin: 10px;
+        position: fixed;
+        bottom: -40px;
+    }
+    .signin-img {
+        visibility: hidden;
+        float: none;
+        z-index: -1;
+    }
 }
