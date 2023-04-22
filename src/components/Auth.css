@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 .signin {
     background-image: url("../../public/signin.jpg") ;
     background-size: cover;
@@ -23,7 +21,6 @@
     padding: 10px;
     left: 0;
 }
->>>>>>> 998a3c6af781c2aa54b1c15bbeb063f2aa822f0a
 button {
     font-size: 20px;
 }
