@@ -37,9 +37,6 @@
 .user-plant-new-data p > span {
     font-weight: bold;
 }
-.new-button {
-
-}
 
 .new-button {
     border: none;
@@ -83,8 +80,5 @@
         margin-top: 0;
         padding-left: 0;
         padding-right: 0;
-    }
-    .user-plant-new form {
-        padding: 
     }
   }
