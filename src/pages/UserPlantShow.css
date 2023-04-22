@@ -1,4 +1,30 @@
+
 .user-plant-show {
-    padding: 100px;
-    margin: 10px;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    padding: 5rem 0;
+    min-height: 100vh;
+}
+.user-plant-show .container {
+    margin-top: 5rem;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #fff;
+}
+.user-plant-show-image {
+    width: 100%;
+}
+
+.user-plant-show-name {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+.user-plant-show-data p {
+    font-size: 1.5rem;
+    
+}
+.user-plant-show-data p > span {
+    font-weight: bold;
 }

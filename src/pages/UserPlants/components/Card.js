@@ -7,7 +7,7 @@ const Card = (props) => {
     const plant = props.plant
     return (
         <div className="plant-card">
-            <CardImage image={plant.image}/>
+            <CardImage image={plant.image} defaultImage={plant.defaultImage}/>
             <CardBody plant={plant} />
             <CardFooter plant={plant} />
         </div>

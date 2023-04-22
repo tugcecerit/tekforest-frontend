@@ -2,6 +2,7 @@ import React from "react";
 import Container from './components/Container'
 import './UserPlants.css';
 
+
 const UserPlants = (props) => {
     const plants = props.plants
     const loaded = () => {
@@ -13,7 +14,11 @@ const UserPlants = (props) => {
     }
 
     const loading = () => {
-        return <h1>Loading...</h1>
+        return (
+            <div className="loading-container">
+                <h1 className="loading">Loading...</h1>
+            </div>
+        )
     }
 
     return (

@@ -7,9 +7,8 @@
   padding: 10px;
   width: 100%;
   margin: auto;
-  font-weight: bold;
   z-index: 1;
-  font-size: 20px;
+  font-size: 1rem;
   height: 5rem;
   backdrop-filter: blur(8px);
 }
@@ -95,4 +94,10 @@
 .logo {
   width: 250px;
   padding: 0.4em;
+}
+
+@media screen and (max-width: 1280px) {
+  .navbar-collapse {
+    display: none;
+  }
 }

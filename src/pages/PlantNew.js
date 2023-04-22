@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import './PlantNew.css';
+import { Link } from 'react-router-dom';
 
 const PlantNew = (props) => {
     const navigate = useNavigate()
@@ -55,13 +56,16 @@ const PlantNew = (props) => {
         return (
             <div className="plant-new">
                 <div className="container">
+                    <Link to='/plants' className='return-link'>
+                        <i class="bi bi-arrow-left"></i> Return
+                    </Link>
                     <div className="row">
                         <div className="col-12 col-md-6">
                             <img id="imageDisplay" className="plant-new-image" src={form.defaultImage}/>
                             <div className="plant-new-data">
                                 <p><span>Common Name: </span>{plant['Common name']}</p>
                                 <p><span>Categories: </span>{plant['Categories']}</p>
-                                <p><span>Climat: </span>{plant['Climat']}</p>
+                                <p><span>Climate: </span>{plant['Climat']}</p>
                                 <p><span>Common name (fr.): </span>{plant['Common name (fr.)']}</p>
                                 <p><span>Latin name: </span>{plant['Latin name']}</p>
                                 <p><span>Description: </span>{plant['Description']}</p>
@@ -74,14 +78,14 @@ const PlantNew = (props) => {
                         <div className="col-12 col-md-6">
                             <h1 className="plant-new-name">Add {form.commonName}</h1>
                             <form onSubmit={handleSubmit} className="pure-form pure-form-stacked">
-                                        <label htmlFor="nickname">Name</label>
+                                        <label htmlFor="nickname">Nickname</label>
                                         <input
                                             id="nickname"
                                             className="pure-u-1"
                                             type="text"
                                             value={form.nickname}
                                             name="nickname"
-                                            placeholder="Plant Name"
+                                            placeholder="Plant Nickname"
                                             className="pure-input-1"
                                             onChange={handleChanges}
                                         />
@@ -130,7 +134,7 @@ const PlantNew = (props) => {
                                                 onChange={handleChanges}
                                             />
                                             <input
-                                                id="climat"
+                                                id="climate"
                                                 className="pure-u-1"
                                                 type="text"
                                                 value={form.climat}
@@ -210,7 +214,11 @@ const PlantNew = (props) => {
     }
 
     const loading = () => {
-        return <h1>Loading...</h1>
+        return (
+            <div className="loading-container">
+                <h1 className="loading">Loading...</h1>
+            </div>
+        )
     }
 
     return (

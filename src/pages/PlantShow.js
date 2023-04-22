@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom"
 import './PlantShow.css';
+import { Link } from 'react-router-dom';
 
 const PlantShow= (props) => {
     const params = useParams()
@@ -12,6 +13,9 @@ const PlantShow= (props) => {
         return (
             <div className="plant-show">
                 <div className="container">
+                    <Link to='/plants' className='return-link'>
+                    <i class="bi bi-arrow-left"></i> Return
+                    </Link>
                     <div className="row">
                         <div className="col-12 col-md-6">
                             <img className="plant-show-image"  src={plant.Img}/>
@@ -19,7 +23,7 @@ const PlantShow= (props) => {
                         <div className="plant-show-data col-12 col-md-6">
                             <h1 className="plant-show-name">{plant['Common name']}</h1>
                             <p><span>Categories: </span>{plant['Categories']}</p>
-                            <p><span>Climat: </span>{plant['Climat']}</p>
+                            <p><span>Climate: </span>{plant['Climat']}</p>
                             <p><span>Common name (fr.): </span>{plant['Common name (fr.)']}</p>
                             <p><span>Latin name: </span>{plant['Latin name']}</p>
                             <p><span>Description: </span>{plant['Description']}</p>
@@ -35,7 +39,11 @@ const PlantShow= (props) => {
     }
 
     const loading = () => {
-        return <h1>Loading...</h1>
+        return (
+            <div className="loading-container">
+                <h1 className="loading">Loading...</h1>
+            </div>
+        )
     }
 
     return (
