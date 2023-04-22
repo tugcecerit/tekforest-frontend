@@ -23,7 +23,7 @@
   font-size: 40px;
 }
 
-.pure-form {
+.contact-us-form .pure-form {
   min-width: 130rem;
 }
 
@@ -46,7 +46,7 @@
 }
 
 @media (max-width: 1280px) {
-  .pure-form {
+  .contact-us-form .pure-form {
     min-width: 130rem;
     color: white;
     font-weight: bolder;
@@ -65,7 +65,7 @@
 }
 
 @media (max-width: 1024px) {
-  .pure-form {
+  .contact-us-form .pure-form {
     min-width: 130rem;
     color: white;
     font-weight: bolder;
@@ -87,7 +87,7 @@
 }
 
 @media (max-width: 768px) {
-  .pure-form {
+  .contact-us-form .pure-form {
     min-width: 100rem;
     color: white;
     font-weight: bolder;
@@ -111,7 +111,7 @@
 }
 
 @media (max-width: 568px) {
-  .pure-form {
+  .contact-us-form .pure-form {
     min-width: 70rem;
     color: white;
     font-weight: bolder;
