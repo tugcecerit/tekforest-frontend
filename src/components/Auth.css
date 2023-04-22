@@ -6,3 +6,11 @@
 button {
     font-size: 20px;
 }
+
+.home-button-auth {
+    width: 12.8em;
+}
+
+.home-button-auth .link {
+    color: white;
+}
