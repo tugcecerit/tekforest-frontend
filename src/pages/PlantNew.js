@@ -8,7 +8,9 @@ const PlantNew = (props) => {
     const params = useParams()
     const id = params.id
     const plants = props.plants
+    console.log(props)
     const plant = plants.find((p) => p.id === id)
+    console.log(plant)
     // state to hold all form data
     const [form, setForm] = useState({
         commonName: `${plant['Common name']}`,
@@ -51,164 +53,156 @@ const PlantNew = (props) => {
 
     const loaded = () => {
         return (
-            <div className="container pure-g">
-                <div className="row">
-                    <h1>Add a new {form.commonName} to your collection</h1>
-                </div>
-                <div className="row">
-                    <div className="col-12 col-md-6">
-                        <img id="imageDisplay" className="pure-u-1" src={form.defaultImage}/>
-                    </div>
-                    <div className="col-12 col-md-6">
-                        <form onSubmit={handleSubmit} className="pure-form pure-form-stacked">
-                            <div className="pure-g">
-                                <div className="pure-u-1">
-                                    <label htmlFor="nickname">Name</label>
-                                    <input
-                                        id="nickname"
-                                        type="text"
-                                        value={form.nickname}
-                                        name="nickname"
-                                        placeholder="Plant Name"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="image">Image</label>
-                                    <input
-                                        id="image"
-                                        type="text"
-                                        value={form.image}
-                                        name="image"
-                                        placeholder="Image Link"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="description">Description</label>
-                                    <textarea
-                                        id="description"
-                                        value={form.description}
-                                        name="description"
-                                        placeholder="Description"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    ></textarea>
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="size">Size</label>
-                                    <input
-                                        id="size"
-                                        type="text"
-                                        value={form.size}
-                                        name="size"
-                                        placeholder="Plant Size"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="commonName">Common Name</label>
-                                    <input
-                                        id="commonName"
-                                        type="text"
-                                        value={form.commonName}
-                                        name="commonName"
-                                        placeholder="Common Name"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="climat">Climat</label>
-                                    <input
-                                        id="climat"
-                                        type="text"
-                                        value={form.climat}
-                                        name="climat"
-                                        placeholder="Climat"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="category">Category</label>
-                                    <input
-                                        id="category"
-                                        type="text"
-                                        value={form.category}
-                                        name="category"
-                                        placeholder="Category"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="family">Family</label>
-                                    <input
-                                        id="family"
-                                        type="text"
-                                        value={form.family}
-                                        name="family"
-                                        placeholder="Family"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="defaultImage">Default Image</label>
-                                    <input
-                                        id="defaultImage"
-                                        type="text"
-                                        value={form.defaultImage}
-                                        name="defaultImage"
-                                        placeholder="Default Image Link"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="origin">Origin</label>
-                                    <input
-                                        id="origin"
-                                        type="text"
-                                        value={form.origin}
-                                        name="origin"
-                                        placeholder="Origin"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="latinName">Latin Name</label>
-                                    <input
-                                        id="latinName"
-                                        type="text"
-                                        value={form.latinName}
-                                        name="latinName"
-                                        placeholder="Latin Name"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                <div className="pure-u-1">
-                                    <label htmlFor="otherNames">Other Names</label>
-                                    <input
-                                        id="otherNames"
-                                        type="text"
-                                        value={form.otherNames}
-                                        name="otherNames"
-                                        placeholder="Latin Name"
-                                        className="pure-input-1"
-                                        onChange={handleChanges}
-                                    />
-                                </div>
-                                
-                                <input type="submit" value="Create Plant" />
+            <div className="plant-new">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-6">
+                            <img id="imageDisplay" className="plant-new-image" src={form.defaultImage}/>
+                            <div className="plant-new-data">
+                                <p><span>Common Name: </span>{plant['Common name']}</p>
+                                <p><span>Categories: </span>{plant['Categories']}</p>
+                                <p><span>Climat: </span>{plant['Climat']}</p>
+                                <p><span>Common name (fr.): </span>{plant['Common name (fr.)']}</p>
+                                <p><span>Latin name: </span>{plant['Latin name']}</p>
+                                <p><span>Description: </span>{plant['Description']}</p>
+                                <p><span>Family: </span>{plant['Family']}</p>
+                                <p><span>Origin: </span>{plant['Origin']}</p>
+                                <p><span>Other names: </span>{plant['Other names']}</p>
+                                <p><span>Zone: </span>{plant['Zone']}</p>
                             </div>
-                        </form>
+                        </div>
+                        <div className="col-12 col-md-6">
+                            <h1 className="plant-new-name">Add {form.commonName}</h1>
+                            <form onSubmit={handleSubmit} className="pure-form pure-form-stacked">
+                                        <label htmlFor="nickname">Name</label>
+                                        <input
+                                            id="nickname"
+                                            className="pure-u-1"
+                                            type="text"
+                                            value={form.nickname}
+                                            name="nickname"
+                                            placeholder="Plant Name"
+                                            className="pure-input-1"
+                                            onChange={handleChanges}
+                                        />
+                                        <label htmlFor="image">Image</label>
+                                        <input
+                                            id="image"
+                                            className="pure-u-1"
+                                            type="text"
+                                            value={form.image}
+                                            name="image"
+                                            placeholder="Image Link"
+                                            className="pure-input-1"
+                                            onChange={handleChanges}
+                                        />
+                                        <label htmlFor="size">Size</label>
+                                        <input
+                                            id="size"
+                                            className="pure-u-1"
+                                            type="text"
+                                            value={form.size}
+                                            name="size"
+                                            placeholder="Plant Size"
+                                            className="pure-input-1"
+                                            onChange={handleChanges}
+                                        />
+                                        <label htmlFor="description">Description</label>
+                                        <textarea
+                                            id="description"
+                                            className="pure-u-1"
+                                            value={form.description}
+                                            name="description"
+                                            placeholder="Description"
+                                            className="pure-input-1"
+                                            onChange={handleChanges}
+                                        ></textarea>
+                                        
+                                        <div className="hidden-fields">
+                                            <input
+                                                id="commonName"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.commonName}
+                                                name="commonName"
+                                                placeholder="Common Name"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                            <input
+                                                id="climat"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.climat}
+                                                name="climat"
+                                                placeholder="Climat"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                            <input
+                                                id="category"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.category}
+                                                name="category"
+                                                placeholder="Category"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                            <input
+                                                id="family"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.family}
+                                                name="family"
+                                                placeholder="Family"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                            <input
+                                                id="defaultImage"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.defaultImage}
+                                                name="defaultImage"
+                                                placeholder="Default Image Link"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                            <input
+                                                id="origin"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.origin}
+                                                name="origin"
+                                                placeholder="Origin"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                            <input
+                                                id="latinName"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.latinName}
+                                                name="latinName"
+                                                placeholder="Latin Name"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                            <input
+                                                id="otherNames"
+                                                className="pure-u-1"
+                                                type="text"
+                                                value={form.otherNames}
+                                                name="otherNames"
+                                                placeholder="Latin Name"
+                                                className="pure-input-1"
+                                                onChange={handleChanges}
+                                            />
+                                        </div>
+                                    <input className="new-button" type="submit" value="Create Plant" />
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,7 +213,11 @@ const PlantNew = (props) => {
         return <h1>Loading...</h1>
     }
 
-    return props.plants.length > 0 ? loaded() : loading()
+    return (
+        <>
+        {props.plants.length > 0 ? loaded() : loading()}
+        </>
+    )
 }
 
 export default PlantNew;

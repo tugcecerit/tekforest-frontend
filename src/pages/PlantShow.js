@@ -3,6 +3,7 @@ import './PlantShow.css';
 
 const PlantShow= (props) => {
     const params = useParams()
+    console.log(props)
     const id = params.id
     const plants = props.plants
     const plant = plants.find((p) => p.id === id)
