@@ -14,7 +14,7 @@ const PlantShow= (props) => {
             <div className="plant-show">
                 <div className="container">
                     <Link to='/plants' className='return-link'>
-                    <i class="bi bi-arrow-left"></i> Return
+                    <i className="bi bi-arrow-left"></i> Return
                     </Link>
                     <div className="row">
                         <div className="col-12 col-md-6">

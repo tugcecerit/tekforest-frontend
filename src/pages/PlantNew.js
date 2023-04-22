@@ -57,7 +57,7 @@ const PlantNew = (props) => {
             <div className="plant-new">
                 <div className="container">
                     <Link to='/plants' className='return-link'>
-                        <i class="bi bi-arrow-left"></i> Return
+                        <i className="bi bi-arrow-left"></i> Return
                     </Link>
                     <div className="row">
                         <div className="col-12 col-md-6">
@@ -86,7 +86,6 @@ const PlantNew = (props) => {
                                             value={form.nickname}
                                             name="nickname"
                                             placeholder="Plant Nickname"
-                                            className="pure-input-1"
                                             onChange={handleChanges}
                                         />
                                         <label htmlFor="image">Image</label>
@@ -97,7 +96,6 @@ const PlantNew = (props) => {
                                             value={form.image}
                                             name="image"
                                             placeholder="Image Link"
-                                            className="pure-input-1"
                                             onChange={handleChanges}
                                         />
                                         <label htmlFor="size">Size</label>
@@ -108,7 +106,6 @@ const PlantNew = (props) => {
                                             value={form.size}
                                             name="size"
                                             placeholder="Plant Size"
-                                            className="pure-input-1"
                                             onChange={handleChanges}
                                         />
                                         <label htmlFor="description">Description</label>
@@ -118,7 +115,6 @@ const PlantNew = (props) => {
                                             value={form.description}
                                             name="description"
                                             placeholder="Description"
-                                            className="pure-input-1"
                                             onChange={handleChanges}
                                         ></textarea>
                                         
@@ -130,7 +126,6 @@ const PlantNew = (props) => {
                                                 value={form.commonName}
                                                 name="commonName"
                                                 placeholder="Common Name"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                             <input
@@ -140,7 +135,6 @@ const PlantNew = (props) => {
                                                 value={form.climat}
                                                 name="climat"
                                                 placeholder="Climat"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                             <input
@@ -150,7 +144,6 @@ const PlantNew = (props) => {
                                                 value={form.category}
                                                 name="category"
                                                 placeholder="Category"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                             <input
@@ -160,7 +153,6 @@ const PlantNew = (props) => {
                                                 value={form.family}
                                                 name="family"
                                                 placeholder="Family"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                             <input
@@ -170,7 +162,6 @@ const PlantNew = (props) => {
                                                 value={form.defaultImage}
                                                 name="defaultImage"
                                                 placeholder="Default Image Link"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                             <input
@@ -180,7 +171,6 @@ const PlantNew = (props) => {
                                                 value={form.origin}
                                                 name="origin"
                                                 placeholder="Origin"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                             <input
@@ -190,7 +180,6 @@ const PlantNew = (props) => {
                                                 value={form.latinName}
                                                 name="latinName"
                                                 placeholder="Latin Name"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                             <input
@@ -200,7 +189,6 @@ const PlantNew = (props) => {
                                                 value={form.otherNames}
                                                 name="otherNames"
                                                 placeholder="Latin Name"
-                                                className="pure-input-1"
                                                 onChange={handleChanges}
                                             />
                                         </div>
