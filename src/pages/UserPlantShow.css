@@ -28,3 +28,8 @@
 .user-plant-show-data p > span {
     font-weight: bold;
 }
+.user-plant-show-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

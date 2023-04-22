@@ -25,9 +25,12 @@ const UserPlantShow= (props) => {
         return (
             <div className="user-plant-show">
                 <div className="container">
-                    <Link to='/userPlants' className='return-link'>
-                        <i class="bi bi-arrow-left"></i> Return
-                    </Link>
+                    <div className="user-plant-show-header">
+                        <Link to='/userPlants' className='return-link'>
+                            <i class="bi bi-arrow-left"></i> Return
+                        </Link>
+                        <button className="delete-button" onClick={deletePlant}>Delete</button>
+                    </div>
                     <div className="row">
                         <div className="col-12 col-md-6">
                             <img className="user-plant-show-image"  src={image}/>
