@@ -37,9 +37,9 @@ const UserPlantEdit = (props) => {
     const loaded = () => {
         return (
             <div className="user-plant-edit">
-                <div class="container">
+                <div className="container">
                     <Link to='/userPlants' className='return-link'>
-                        <i class="bi bi-arrow-left"></i> Return
+                        <i className="bi bi-arrow-left"></i> Return
                     </Link>
                     <h1 className="user-plant-edit-name">Edit Plant</h1>
                     <form onSubmit={handleSubmit} className="pure-form pure-form-stacked">
@@ -51,7 +51,6 @@ const UserPlantEdit = (props) => {
                             value={form.nickname}
                             name="nickname"
                             placeholder="Plant Nickname"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="image">Image</label>
@@ -62,7 +61,6 @@ const UserPlantEdit = (props) => {
                             value={form.image}
                             name="image"
                             placeholder="Image Link"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="size">Size</label>
@@ -73,7 +71,6 @@ const UserPlantEdit = (props) => {
                             value={form.size}
                             name="size"
                             placeholder="Plant Size"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="description">Description</label>
@@ -83,7 +80,6 @@ const UserPlantEdit = (props) => {
                             value={form.description}
                             name="description"
                             placeholder="Description"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         ></textarea>
                         <label htmlFor="commonName">Common Name</label>
@@ -94,7 +90,6 @@ const UserPlantEdit = (props) => {
                             value={form.commonName}
                             name="commonName"
                             placeholder="Common Name"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="climate">Climate</label>
@@ -105,7 +100,6 @@ const UserPlantEdit = (props) => {
                             value={form.climat}
                             name="climat"
                             placeholder="Climate"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="category">Category</label>
@@ -116,7 +110,7 @@ const UserPlantEdit = (props) => {
                             value={form.category}
                             name="category"
                             placeholder="Category"
-                            className="pure-input-1"
+
                             onChange={handleChanges}
                         />
                         <label htmlFor="family">Family</label>
@@ -127,7 +121,6 @@ const UserPlantEdit = (props) => {
                             value={form.family}
                             name="family"
                             placeholder="Family"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="origin">Origin</label>
@@ -138,7 +131,6 @@ const UserPlantEdit = (props) => {
                             value={form.origin}
                             name="origin"
                             placeholder="Origin"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="latinName">Latin Name</label>
@@ -149,7 +141,6 @@ const UserPlantEdit = (props) => {
                             value={form.latinName}
                             name="latinName"
                             placeholder="Latin Name"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <label htmlFor="otherNames">Other Names</label>
@@ -160,7 +151,6 @@ const UserPlantEdit = (props) => {
                             value={form.otherNames}
                             name="otherNames"
                             placeholder="Latin Name"
-                            className="pure-input-1"
                             onChange={handleChanges}
                         />
                         <input className="edit-button" type="submit" value="Update Plant" />

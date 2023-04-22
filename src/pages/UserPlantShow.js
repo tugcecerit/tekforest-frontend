@@ -26,7 +26,7 @@ const UserPlantShow= (props) => {
             <div className="user-plant-show">
                 <div className="container">
                     <Link to='/userPlants' className='return-link'>
-                        <i class="bi bi-arrow-left"></i> Return
+                        <i className="bi bi-arrow-left"></i> Return
                     </Link>
                     <div className="row">
                         <div className="col-12 col-md-6">

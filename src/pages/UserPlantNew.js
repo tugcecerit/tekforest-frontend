@@ -29,9 +29,9 @@ const UserPlantNew = (props) => {
 
     return (
         <div className="user-plant-new">
-            <div class="container">
+            <div className="container">
                 <Link to='/userPlants' className='return-link'>
-                    <i class="bi bi-arrow-left"></i> Return
+                    <i className="bi bi-arrow-left"></i> Return
                 </Link>
                 <h1 className="user-plant-new-name">New Plant</h1>
                 <form onSubmit={handleSubmit} className="pure-form pure-form-stacked">
@@ -43,7 +43,6 @@ const UserPlantNew = (props) => {
                                 value={form.nickname}
                                 name="nickname"
                                 placeholder="Plant Nickname"
-                                className="pure-input-1"
                                 onChange={handleChanges}
                             />
                             <label htmlFor="image">Image</label>
@@ -54,7 +53,6 @@ const UserPlantNew = (props) => {
                                 value={form.image}
                                 name="image"
                                 placeholder="Image Link"
-                                className="pure-input-1"
                                 onChange={handleChanges}
                             />
                             <label htmlFor="size">Size</label>
@@ -65,7 +63,6 @@ const UserPlantNew = (props) => {
                                 value={form.size}
                                 name="size"
                                 placeholder="Plant Size"
-                                className="pure-input-1"
                                 onChange={handleChanges}
                             />
                             <label htmlFor="description">Description</label>
@@ -75,7 +72,6 @@ const UserPlantNew = (props) => {
                                 value={form.description}
                                 name="description"
                                 placeholder="Description"
-                                className="pure-input-1"
                                 onChange={handleChanges}
                             ></textarea>
                             <label htmlFor="commonName">Common Name</label>
@@ -86,7 +82,6 @@ const UserPlantNew = (props) => {
                                     value={form.commonName}
                                     name="commonName"
                                     placeholder="Common Name"
-                                    className="pure-input-1"
                                     onChange={handleChanges}
                                 />
                                 <label htmlFor="climate">Climate</label>
@@ -97,7 +92,6 @@ const UserPlantNew = (props) => {
                                     value={form.climat}
                                     name="climat"
                                     placeholder="Climate"
-                                    className="pure-input-1"
                                     onChange={handleChanges}
                                 />
                                 <label htmlFor="category">Category</label>
@@ -108,7 +102,6 @@ const UserPlantNew = (props) => {
                                     value={form.category}
                                     name="category"
                                     placeholder="Category"
-                                    className="pure-input-1"
                                     onChange={handleChanges}
                                 />
                                 <label htmlFor="family">Family</label>
@@ -119,7 +112,6 @@ const UserPlantNew = (props) => {
                                     value={form.family}
                                     name="family"
                                     placeholder="Family"
-                                    className="pure-input-1"
                                     onChange={handleChanges}
                                 />
                                 <label htmlFor="origin">Origin</label>
@@ -130,7 +122,6 @@ const UserPlantNew = (props) => {
                                     value={form.origin}
                                     name="origin"
                                     placeholder="Origin"
-                                    className="pure-input-1"
                                     onChange={handleChanges}
                                 />
                                 <label htmlFor="latinName">Latin Name</label>
@@ -141,7 +132,6 @@ const UserPlantNew = (props) => {
                                     value={form.latinName}
                                     name="latinName"
                                     placeholder="Latin Name"
-                                    className="pure-input-1"
                                     onChange={handleChanges}
                                 />
                                 <label htmlFor="otherNames">Other Names</label>
@@ -152,7 +142,6 @@ const UserPlantNew = (props) => {
                                     value={form.otherNames}
                                     name="otherNames"
                                     placeholder="Latin Name"
-                                    className="pure-input-1"
                                     onChange={handleChanges}
                                 />
                         <input className="new-button" type="submit" value="Create Plant" />

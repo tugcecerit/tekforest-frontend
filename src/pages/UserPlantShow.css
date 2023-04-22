@@ -11,9 +11,12 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .user-plant-show-image {
     width: 100%;
+    border-radius: 5px;
 }
 
 .user-plant-show-name {
