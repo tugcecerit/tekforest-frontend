@@ -8,8 +8,10 @@ const Container = (props) => {
 
     return (
         <div className="container">
-            <h1>My Plants</h1>
-            <Button to={`/userPlants/new`}  label="NEW" />
+            <div className="heading-container">
+                <h1>My Plants</h1>
+                <Button to={`/userPlants/new`}  label="NEW" />
+            </div>
             <div className="row g-4">
                     {plants.map((plant) => {
                         return (

@@ -1,41 +1,45 @@
 
-.plant-new {
+.user-plant-edit {
     background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
     padding: 5rem 0;
     min-height: 100vh;
+    padding-bottom: 5rem;
 }
-.plant-new .hidden-fields {
+.user-plant-edit .hidden-fields {
     display: none;
 }
-.plant-new .container {
-    margin-top: 5rem;
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+.user-plant-edit .container {
+    padding-left: 15rem;
+    padding-right: 15rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+.user-plant-edit form {
+    padding: 2rem;
     background-color: #fff;
 }
-.plant-new form label {
+.user-plant-edit form label {
     margin-top: 1rem;
 }
-.plant-new-image {
+.user-plant-edit-image {
     width: 70%;
 }
 
-.plant-new-name {
+.user-plant-edit-name {
+    text-align: center;
     font-size: 4rem;
     font-weight: 300;
     margin-top: 0;
 }
-.plant-new-data p {
+.user-plant-edit-data p {
     font-size: 1.5rem;
     
 }
-.plant-new-data p > span {
+.user-plant-edit-data p > span {
     font-weight: bold;
 }
 
-.new-button {
+.edit-button {
     border: none;
     background-color: #b0bfaf;
     color: white;
@@ -47,16 +51,38 @@
     cursor: pointer;
     transform: translate(1) translate(0, 0);
     transition: transform 225ms, box-shadow 225ms;
+    display: block;
     margin-left: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
-  .new-button:hover {
+  .edit-button:hover {
     transform: scale(1.05) translate(0, -0.15rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
   }
   
-  .new-button:active {
+  .edit-button:active {
     transform: scale(1) translate(0, 0.15rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   } 
+
+  @media (max-width: 1280px) {
+    .user-plant-edit .container {
+        margin-top: 5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-color: #fff;
+    }
+  }
+  @media (max-width: 768px) {
+    .user-plant-edit .container {
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .user-plant-edit form {
+        padding: 
+    }
+  }

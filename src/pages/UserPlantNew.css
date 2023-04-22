@@ -1,18 +1,20 @@
 
 .user-plant-new {
     background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-    padding-top: 5rem;
+    padding: 5rem 0;
     min-height: 100vh;
 }
 .user-plant-new .hidden-fields {
     display: none;
 }
 .user-plant-new .container {
-    margin-top: 5rem;
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+    padding-left: 15rem;
+    padding-right: 15rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+.user-plant-new form {
+    padding: 2rem;
     background-color: #fff;
 }
 .user-plant-new form label {
@@ -23,6 +25,7 @@
 }
 
 .user-plant-new-name {
+    text-align: center;
     font-size: 4rem;
     font-weight: 300;
     margin-top: 0;
@@ -50,8 +53,9 @@
     cursor: pointer;
     transform: translate(1) translate(0, 0);
     transition: transform 225ms, box-shadow 225ms;
+    display: block;
     margin-left: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
   .new-button:hover {
@@ -63,3 +67,24 @@
     transform: scale(1) translate(0, 0.15rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   } 
+
+  @media (max-width: 1280px) {
+    .user-plant-new .container {
+        margin-top: 5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-color: #fff;
+    }
+  }
+  @media (max-width: 768px) {
+    .user-plant-new .container {
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .user-plant-new form {
+        padding: 
+    }
+  }

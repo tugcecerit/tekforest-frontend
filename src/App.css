@@ -266,3 +266,22 @@ button:active {
 *, *:before, *:after {
   box-sizing: border-box;
 }
+
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  font-size: 5rem;
+  font-weight: 200;
+}
+.return-link {
+  font-size: 2rem;
+  font-weight: 300;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  color: #000 !important;
+}

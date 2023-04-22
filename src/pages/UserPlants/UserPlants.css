@@ -11,7 +11,13 @@
       font-size: 4rem;
       font-weight: 300;
       text-align: center;
-      margin-top: 0;
+    }
+
+    .index .container .heading-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
     }
     .plant-card {
       background-color: #fff;

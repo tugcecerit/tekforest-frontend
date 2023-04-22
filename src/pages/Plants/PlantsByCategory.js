@@ -43,8 +43,13 @@ const PlantsContainerByCategory = (props) => {
     }
 
     const loading = () => {
-        return <h1>Loading...</h1>
+        return (
+            <div className="loading-container">
+                <h1 className="loading">Loading...</h1>
+            </div>
+        )
     }
+    
     return plants.length ? loaded() : loading()
 }
 
