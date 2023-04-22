@@ -27,7 +27,7 @@ const UserPlantShow= (props) => {
                 <div className="container">
                     <div className="user-plant-show-header">
                         <Link to='/userPlants' className='return-link'>
-                            <i class="bi bi-arrow-left"></i> Return
+                            <i className="bi bi-arrow-left"></i> Return
                         </Link>
                         <button className="delete-button" onClick={deletePlant}>Delete</button>
                     </div>
