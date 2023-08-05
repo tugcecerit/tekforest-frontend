@@ -138,7 +138,7 @@ const Main = (props) => {
     }
 
     const updatePlant = async (plant, id) => {
-        await fetch(URL + id, {
+        await fetch(URL + "/" + id, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -149,7 +149,7 @@ const Main = (props) => {
     }
 
     const deletePlant = async (id) => {
-        await fetch(URL + id, {
+        await fetch(URL + "/" + id, {
             method: "DELETE",
         });
         getUserPlants();
