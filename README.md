@@ -3,8 +3,8 @@ TEKforest is a website that provides information about various plants, including
 
 ## Link For The Website
 
-- tekforest-frontend.herokuapp.com/
-- tekforest-backend.herokuapp.com/plants
+- https://tekforest-frontend.vercel.app/
+- https://tekforest-backend.vercel.app/plants
 
 ## Getting Started
 To use this website, simply navigate to the homepage and browse through the list of plants or categories. You can click on a plant's name to view more information about it.
